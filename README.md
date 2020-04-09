@@ -11,7 +11,7 @@
 
 ### Features (v.1)
 
-- notice board allowing users to post CREATE (C), LIKE and VIEW (R) all notes. Additionally, a user is able to DELETE viewed notes to see what's underneath. 
+- notice board allowing users to post CREATE (C), LIKE and VIEW (R) all notes. Additionally, a user is able to DELETE (pop) viewed notes to see what's underneath. 
 
 - the notes contains: 
         1. text
