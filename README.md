@@ -20,7 +20,7 @@
         4.  like button
         5.  #of likes
 
-- users have the option of logging in (AUTH) to unlock ability to view two lists: LIKES and AUTHORED NOTES.  
+- users have the option of logging in (AUTH) to unlock ability to view two lists: "MY FAVORITES" and "MY NOTES".  
 
 - the app will have a list of "flagged" words, ensuring that the content is PG.
 
