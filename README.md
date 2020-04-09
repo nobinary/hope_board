@@ -27,7 +27,7 @@
 - the app will have a list of "flagged" words, ensuring that the content is PG. We need user advisory ("how it works"/ABOUT) + list of flagged words
 
 COMPONENT TREE: 
-
+```
 App 
 | Screens
 ----> Board (NOT LOGGED IN)
@@ -40,6 +40,7 @@ App
 -----> Note (modal)
 -----> Modal (About etc.)
 -----> Create Note (modal?)
+```
 
 ### Features (v.2)
 
