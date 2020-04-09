@@ -2,9 +2,8 @@
 
 Stack
 
-- React? 
-
-- Ruby/Sequelize/Postgres
+- Front-End: React? 
+- Back-End: Ruby/Sequelize/Postgres, deployed on Heroku
 
 Features (v.1)
 
