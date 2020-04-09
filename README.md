@@ -13,12 +13,12 @@
 
 - notice board allowing users to post CREATE (C), LIKE and VIEW (R) all notes. Additionally, a user is able to DELETE viewed notes to see what's underneath. 
 
-- the notes contains 
-1. text
-2.  date created
-3.  author (can be anonymous)
-4.  like button
-5.  #of likes
+- the notes contains: 
+        1. text
+        2.  date created
+        3.  author (can be anonymous)
+        4.  like button
+        5.  #of likes
 
 - users have the option of logging in (AUTH) to unlock ability to view two lists: LIKES and AUTHORED NOTES.  
 
