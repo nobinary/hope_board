@@ -1,0 +1,5 @@
+
+.board_main {
+    display: flex;
+    border: 2px red solid;
+}

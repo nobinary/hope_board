@@ -34,12 +34,15 @@ App
 ----> Register
 ----> Login
 ----> My Board (2 lists: MY POSTS/MY FAVORITES)
-| Common/Shared Components
+| Components
 -----> Menu (Hidden side nav)
 -----> Note (base)
 -----> Note (modal)
 -----> Modal (About etc.)
 -----> Create Note (modal?)
+| Shared Components
+----> FP Button (Front-Page Button Template)
+
 ```
 
 ### Features (v.2)
