@@ -30,3 +30,8 @@
 - Searchable notes
 - Color picker
 - Ability to EDIT (U) and DELETE (D) notes
+
+
+### Faeatures (v. 3) 
+
+- Mobile version
