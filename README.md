@@ -38,10 +38,10 @@ App
 -----> Menu (Hidden side nav)
 -----> Note (base)
 -----> Note (modal)
------> Modal (About etc.)
 -----> Create Note (modal?)
 | Shared Components
 ----> FP Button (Front-Page Button Template)
+-----> Modal (About etc.)
 
 ```
 
