@@ -7,8 +7,9 @@ function Menu() {
       <div className="menu_main">
           <p>This is a not-yet-hidden navigation menu</p>
           <Link to="/">Home</Link>
-          <Link to="/Login">Login</Link>
-          <Link to="/Register">Register</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+          <Link to="/myboard">My Board</Link>
       </div>
     );
   }

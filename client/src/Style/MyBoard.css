@@ -1,0 +1,21 @@
+
+.myboard_main {
+    display: flex;
+    border: 2px red solid;
+    height: 80vh;
+}
+
+.myboard {
+    display: flex;
+}
+
+.mylists {
+    border: 1px purple solid;
+    width: 40vw;
+}
+
+.mynotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

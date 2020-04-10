@@ -1,13 +1,13 @@
 import React from 'react'
 import Modal from '../Shared Components/Modal'
 
-function CreateNote() {
+function About() {
     return (
       <div>
           <Modal
-          type="create note"/>
+            type="about"/>
       </div>
     );
   }
   
-  export default CreateNote;
+  export default About;

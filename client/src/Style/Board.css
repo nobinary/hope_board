@@ -2,4 +2,10 @@
 .board_main {
     display: flex;
     border: 2px red solid;
+    height: 80vh;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
 }
