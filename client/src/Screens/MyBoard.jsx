@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../Components/Menu";
 import Note from "../Components/Note";
 import Footer from "../Components/Footer";
-import "../Style/MyBoard.css";
+import "../Style/MyBoard.scss";
 
 class MyBoard extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Style/Note.css'
+import '../Style/Note.scss'
 
 // pass API props down from Board/MyBoard mapping
 function Note(props) {
