@@ -18,7 +18,7 @@ class Board extends React.Component {
           </div>
           <div className="board_box">
             <p>This is THE BOARD</p>
-            {/* INSERT RENDER NOTE */}
+            {/* INSERT API/RENDER NOTEs */}
             <div className="notes">
               <Note />
               <Note />

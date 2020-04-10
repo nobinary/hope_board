@@ -19,7 +19,7 @@ class MyBoard extends React.Component {
           <div className="myboard">
             <div className="mylists">
               <p>This is MY POSTS</p>
-              {/* INSERT RENDER MY NOTES */}
+              {/* INSERT API/RENDER MY NOTES */}
               <div className="mynotes">
                 <Note />
                 <Note />
@@ -28,7 +28,7 @@ class MyBoard extends React.Component {
             </div>
             <div className="mylists">
               <p>This is MY FAVORITES</p>
-              {/* INSERT RENDER MY FAVORITES */}
+              {/* INSERT API/RENDER MY FAVORITES */}
               <div className="mynotes">
                 <Note />
                 <Note />
