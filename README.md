@@ -40,7 +40,7 @@ App
 -----> Footer
 -----> Note (base)
 -----> Note (modal)
------> Create Note (modal?)
+-----> Create Note
 | Shared Components
 ----> FP Button (Front-Page Button Template)
 -----> Modal (Used for Register, Login, About, CreateNote etc.)
