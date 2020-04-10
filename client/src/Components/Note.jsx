@@ -1,7 +1,8 @@
 import React from 'react'
 import '../Style/Note.css'
 
-function Note() {
+// pass API props down from Board/MyBoard mapping
+function Note(props) {
     return (
       <div className="note_main">
           <div className="main_note">

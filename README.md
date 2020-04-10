@@ -31,19 +31,19 @@ COMPONENT TREE:
 App 
 | Screens
 ----> Board (NOT LOGGED IN)
-----> Register
-----> Login
+----> Register 
+----> Login 
 ----> My Board (2 lists: MY POSTS/MY FAVORITES)
 | Components
 -----> Menu (Hidden side nav)
------> About
+-----> About (modal)
 -----> Footer
 -----> Note (base)
 -----> Note (modal)
------> Create Note
+-----> CreateNote (modal)
 | Shared Components
-----> FP Button (Front-Page Button Template)
------> Modal (Used for Register, Login, About, CreateNote etc.)
+----> FPButton (Front-Page Button Template)
+-----> BigPostIt (Used for Register + Login Screens etc.)
 
 ```
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Modal(props) {
+function BigPostIt(props) {
 
     // mapInputElements = () => {
 
@@ -8,10 +8,10 @@ function Modal(props) {
 
     return (
       <div>
-          <p>This is a modal for {props.type}</p>
+          <p>This is a BigPostIt for {props.type}</p>
           {/* {INPUTLIST} */}
       </div>
     );
   }
   
-  export default Modal;
+  export default BigPostIt;

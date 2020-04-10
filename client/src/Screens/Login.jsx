@@ -1,14 +1,11 @@
 import React from 'react'
-import Modal from '../Shared Components/Modal'
+import BigPostIt from '../Shared Components/BigPostIt'
 
 function Login() {
     return (
       <div className="note_main">
-          <Modal 
+          <BigPostIt 
           type="login"
-          field_num="2"
-          input1="login"
-          input2="password"
           />
       </div>
     );

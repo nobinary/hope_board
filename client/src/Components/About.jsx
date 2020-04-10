@@ -1,10 +1,10 @@
 import React from 'react'
-import Modal from '../Shared Components/Modal'
+import BigPostIt from '../Shared Components/BigPostIt'
 
 function About() {
     return (
       <div>
-          <Modal
+          <BigPostIt
             type="about"/>
       </div>
     );
