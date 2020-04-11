@@ -1,0 +1,66 @@
+$primary-blue: #12EAD1;
+$primary-yellow: #FFEB00;
+$primary-magenta: #FF2BBE;
+$main-fonts: white;
+
+
+#note_main {
+    position: relative;
+
+    #background {
+        max-width: 100%;
+        position: relative;
+        display: flex;
+    }
+    #yellow-note {
+        height: 500px;
+        width: 550px;
+        background-color: $primary-yellow;
+        position: absolute;
+        transform: rotate(-10deg);
+        top: 22%;
+        left: 40%;
+        box-shadow: 10px 10px 40px;
+    }
+}
+
+.login-form {
+    position: absolute;
+    background-color: $primary-blue;
+    top: 14%;
+    left: 30%;
+    height: 500px;
+    width: 550px;
+    box-shadow: 10px 20px 40px black;
+    color: $main-fonts;
+
+    p {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    #login-input {
+        display: flex;
+        flex-direction: column;
+
+        #username {
+            width: 60%;
+        }
+
+        #password {
+            width: 60%;
+        }
+    }
+
+    #submit {
+        background-color: $primary-magenta;
+        width: 30%;
+        height: 6vh;
+        color: $main-fonts;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 35%;
+        margin-top: 50px;
+    }
+
+}

@@ -4,15 +4,17 @@ import '../Style/Login.scss'
 
 function Login() {
   return (
-    <div class="note_main">
+    <div id="note_main">
+      <img id="background" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
       {/* <BigPostIt
         type="login"
       /> */}
-      <main id="login-form">
-        <p>Welcome Back!</p>
+      <div id="yellow-note"></div>
+      <main class="login-form">
+        <p>Nice to see you again!</p>
         <h1>Login</h1>
-        <form>
-          <label for="username">
+        <form id="login-input">
+          <label id="label" for="username">
             Username:
             <input
               type="text"
@@ -22,7 +24,7 @@ function Login() {
             >
             </input>
           </label>
-          <label for="username">
+          <label id="label" for="password">
             Password:
             <input
               type="text"
