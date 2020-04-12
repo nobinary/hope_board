@@ -9,6 +9,9 @@ function Login() {
       {/* <BigPostIt
         type="login"
       /> */}
+      <header>
+        <title id="main-title">MindBoard</title>
+        </header>
       <div id="yellow-note"></div>
       <main class="login-form">
         <p>Nice to see you again!</p>

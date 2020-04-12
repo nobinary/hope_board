@@ -1,6 +1,6 @@
-$primary-blue: #12EAD1;
-$primary-yellow: #FFEB00;
-$primary-magenta: #FF2BBE;
+$primary-blue: rgb(0, 255, 225);
+$primary-yellow: rgb(255, 234, 0);
+$primary-magenta: rgb(255, 0, 179);
 $main-fonts: white;
 
 
@@ -12,6 +12,12 @@ $main-fonts: white;
         position: relative;
         display: flex;
     }
+
+    #main-title {
+        position: absolute;
+        color: white;
+    }
+
     #yellow-note {
         height: 500px;
         width: 550px;
@@ -48,7 +54,7 @@ $main-fonts: white;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
             margin-top: 15px;
             margin-left: 17%;
@@ -59,21 +65,27 @@ $main-fonts: white;
             width: 65%;
             height: 4vh;
             margin-left: 17%;
+            border-color: rgba(235, 234, 234, 0.851);
         }
 
         #input::placeholder {
-            margin-left: 40px;
+            padding-left: 3px;
+            color: #C6C5C5;
+            font-weight: 300;
         }
 
         #submit {
             background-color: $primary-magenta;
+            color: $main-fonts;
+            cursor: pointer;
             width: 30%;
             height: 6vh;
-            color: $main-fonts;
             font-size: 25px;
-            font-weight: bold;
+            font-weight: 700;
             margin-left: 35%;
             margin-top: 40px;
+            border: #DD0097;
+            box-shadow: 1px 1px 2px black;
         }
     }
 
