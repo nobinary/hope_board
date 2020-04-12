@@ -20,7 +20,7 @@ $main-fonts: white;
         transform: rotate(-10deg);
         top: 22%;
         left: 40%;
-        box-shadow: 10px 10px 50px;
+        box-shadow: 10px 10px 50px #1C1C1C;
     }
 }
 
@@ -31,7 +31,7 @@ $main-fonts: white;
     left: 30%;
     height: 500px;
     width: 550px;
-    box-shadow: 10px 20px 50px black;
+    box-shadow: 10px 20px 50px #373737;
     color: $main-fonts;
 
     p {
