@@ -9,7 +9,7 @@ function Footer() {
           {/* <p>This is set up as a footer w/ the overlay buttons </p> */}
           <Link to="/createnote">
           <img 
-          src="https://i.imgur.com/n71V3jf.png" 
+          src="https://i.imgur.com/Df7R8tu.png" 
           id="create-icon" 
           alt="white plus button to create a post" 
           />
@@ -17,7 +17,7 @@ function Footer() {
           </Link>
           <Link to="/about">
           <img 
-          src="https://i.imgur.com/XpHvJ9h.png" 
+          src="https://i.imgur.com/JgBnwAE.png" 
           id="about-icon" 
           alt="white info icon that directs you to how website works" 
           />
