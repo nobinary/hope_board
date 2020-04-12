@@ -20,7 +20,7 @@ $main-fonts: white;
         transform: rotate(-10deg);
         top: 22%;
         left: 40%;
-        box-shadow: 10px 10px 40px;
+        box-shadow: 10px 10px 50px;
     }
 }
 
@@ -31,36 +31,51 @@ $main-fonts: white;
     left: 30%;
     height: 500px;
     width: 550px;
-    box-shadow: 10px 20px 40px black;
+    box-shadow: 10px 20px 50px black;
     color: $main-fonts;
 
     p {
         padding-top: 30px;
         font-size: 30px;
+        font-weight: 700;
     }
 
     #login-input {
         display: flex;
         flex-direction: column;
 
-        #username {
-            width: 60%;
+        #label {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-left: 17%;
+            margin-bottom: 7px;
         }
 
-        #password {
-            width: 60%;
+        #input {
+            width: 65%;
+            height: 4vh;
+            margin-left: 17%;
+        }
+
+        #input::placeholder {
+            margin-left: 40px;
+        }
+
+        #submit {
+            background-color: $primary-magenta;
+            width: 30%;
+            height: 6vh;
+            color: $main-fonts;
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 35%;
+            margin-top: 40px;
         }
     }
 
-    #submit {
-        background-color: $primary-magenta;
-        width: 30%;
-        height: 6vh;
-        color: $main-fonts;
-        font-size: 25px;
-        font-weight: bold;
-        margin-left: 35%;
-        margin-top: 50px;
-    }
 
 }

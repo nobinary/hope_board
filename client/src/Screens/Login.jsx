@@ -15,25 +15,25 @@ function Login() {
         <h1>Login</h1>
         <form id="login-input">
           <label id="label" for="username">
-            Username:
+            Username
+            </label>
             <input
               type="text"
               placeholder="Enter your username"
-              id="username"
+              id="input"
               required
             >
             </input>
-          </label>
           <label id="label" for="password">
-            Password:
+            Password
+            </label>
             <input
               type="text"
               placeholder="Enter your password"
-              id="password"
+              id="input"
               required
             >
             </input>
-          </label>
         <button 
         type="submit" 
         id="submit"
