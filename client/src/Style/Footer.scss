@@ -1,18 +1,17 @@
 #footer_main {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
 
     #create-icon {
         display: flex;
         margin-bottom: 15px;
-        margin-left: 10px;
     }
 
     #about-icon {
         display: flex;
-        margin-left: 10px;
     }
 
 
