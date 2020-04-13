@@ -12,7 +12,7 @@ class Board extends React.Component {
   render() {
     return (
       <div id="fp_main">
-        <img id="background" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
+        <img id="background" class="img-responsive" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
           <div class="board-menu">
             <Menu />
           </div>

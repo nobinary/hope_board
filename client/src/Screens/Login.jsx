@@ -5,7 +5,12 @@ import '../Style/Login.scss'
 function Login() {
   return (
     <div id="note_main">
-      <img id="background" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
+      <img 
+      id="background" 
+      class="img-responsive" 
+      src="https://i.imgur.com/PYvrnAk.jpg" 
+      alt="brown corkboard background" 
+      />
       {/* <BigPostIt
         type="login"
       /> */}
@@ -37,6 +42,7 @@ function Login() {
         <button 
         type="submit" 
         id="submit"
+        class="btn btn-default"
         >
           Submit
           </button>

@@ -8,7 +8,12 @@ function Register() {
           {/* <BigPostIt
           type="registration"
           /> */}
-      <img id="background" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
+      <img 
+      id="background"
+      class="img-responsive" 
+      src="https://i.imgur.com/PYvrnAk.jpg" 
+      alt="brown corkboard background" 
+      />
       <div id="blue-note"></div>
       <main class="register-form">
         <h1>Register</h1>
@@ -40,7 +45,11 @@ function Register() {
               id="input" 
               required>
               </input>
-              <button type="submit" id="submit">
+              <button 
+              type="submit" 
+              id="submit"
+              class="btn btn-default"
+              >
                 Submit
               </button>
               <p id="member-link">Already a member? Login <a href="/login">here</a>.</p>

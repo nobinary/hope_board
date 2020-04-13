@@ -11,6 +11,7 @@ function Footer() {
           <img 
           src="https://i.imgur.com/Df7R8tu.png" 
           id="create-icon" 
+          class="img-responsive"
           alt="white plus button to create a post" 
           />
           {/* <FPButton text="This is a CREACTE NOTE  (+) Button" /> */}
@@ -19,6 +20,7 @@ function Footer() {
           <img 
           src="https://i.imgur.com/JgBnwAE.png" 
           id="about-icon" 
+          class="img-responsive"
           alt="white info icon that directs you to how website works" 
           />
           {/* <FPButton text="This is an ABOUT (?) Button" /> */}
