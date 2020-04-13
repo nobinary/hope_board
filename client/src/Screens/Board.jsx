@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../Components/Menu";
 import Note from "../Components/Note";
 import Footer from "../Components/Footer";
-import "../Style/Board.css";
+import "../Style/Board.scss";
 
 class Board extends React.Component {
   constructor(props) {
@@ -11,13 +11,13 @@ class Board extends React.Component {
   }
   render() {
     return (
-      <div className="fp_main">
-        <div className="board_main">
-          <div className="board_menu">
+      <div id="fp_main">
+        <img id="background" class="img-responsive" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
+          <div class="board-menu">
             <Menu />
           </div>
-          <div className="board_box">
-            <p>This is THE BOARD</p>
+          <div class="board-box">
+            {/* <p>This is THE BOARD</p> */}
             {/* INSERT API/RENDER NOTEs */}
             <div className="notes">
               <Note />
@@ -27,7 +27,6 @@ class Board extends React.Component {
               <Note />
               <Note />
             </div>
-          </div>
         </div>
         <Footer />
       </div>

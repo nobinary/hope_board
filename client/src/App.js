@@ -6,7 +6,8 @@ import Register from './Screens/Register'
 import CreateNote from './Components/CreateNote'
 import About from './Components/About'
 import {Switch, Route} from 'react-router-dom'
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.scss';
 
 function App() {
   return (
