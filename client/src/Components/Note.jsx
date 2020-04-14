@@ -1,8 +1,6 @@
 import React from 'react'
 import '../Style/Note.scss'
-import axios from 'axios'
 
-// pass API props down from Board/MyBoard mapping
 function Note(props) {
   // swich assignment of css color
     return (
@@ -10,18 +8,17 @@ function Note(props) {
           <div className="main_note">
           <p> {props.content}</p>
           <p> author: {props.user_id}</p>
-          <p> {props.num_likes}</p>
+          <p>date: 00/00/00
+            {/* date needs formatting on back end? */}
+          {/* {props.created_at} */}
+          </p>
+          <div className="like_box">
+          <button className="like_content">LIKE</button>
+          <p className="like_content"> num likes: {props.num_likes}</p>
+          </div>
           </div>
       </div>
     );
   }
   
   export default Note;
-
-//   id: 50,
-// color: "blue",
-// content: "Portland literally post-ironic normcore.",
-// num_likes: 1,
-// created_at: "2020-04-13T17:41:14.472Z",
-// updated_at: "2020-04-13T17:41:14.931Z",
-// user_id: 10
