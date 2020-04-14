@@ -2,10 +2,11 @@ import React from 'react'
 import '../Style/Note.scss'
 
 function Note(props) {
-  // swich assignment of css color
+
     return (
       <div id="note_main">
-          <div className="main_note">
+          <div className={ `main_note ${props.color}`}>
+          {console.log(props.color)}
           <p> {props.content}</p>
           <p> author: {props.user_id}</p>
           <p>date: 00/00/00
