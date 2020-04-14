@@ -4,10 +4,13 @@ import axios from 'axios'
 
 // pass API props down from Board/MyBoard mapping
 function Note(props) {
+  // swich assignment of css color
     return (
       <div id="note_main">
-          <div class="main_note">
-          <p> This is a Note</p>
+          <div className="main_note">
+          <p> {props.content}</p>
+          <p> author: {props.user_id}</p>
+          <p> {props.num_likes}</p>
           </div>
       </div>
     );

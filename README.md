@@ -7,7 +7,7 @@
 ### Stack
 
 - Front-End: React, deployed on AMZ
-- Back-End: Ruby/Sequelize/Postgres, deployed on Heroku
+- Back-End: Ruby/Postgres, deployed on Heroku
 
 ### Features (v.1)
 

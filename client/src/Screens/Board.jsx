@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../Components/Menu";
 import Note from "../Components/Note";
 import Footer from "../Components/Footer";
-import Axios from 'axios'
+import {fetchNotes} from '../Services/ApiMethods'
 import "../Style/Board.scss";
 
 class Board extends React.Component {
@@ -14,17 +14,37 @@ class Board extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchNotes();
+   const notes = fetchNotes();
+   const self = this
+  notes.then(function(data) { 
+  console.log(data.data)
+  self.setState(state => ({
+        notes: data.data
+      }));
+      console.log(self.state.notes)
+    });
   }
 
-  fetchNotes = async () => {
-    try {
-    const notes = await Axios.get('http://localhost:3000/notes')
-    console.log(notes)
-    } catch (error) {
-      console.log("Error: ", error)
+  renderNotes = () => {
+    const { history } = this.props;
+    console.log("renderstate" + this.state.notes);
+    if (this.state.notes && this.state.notes.length > 0) {
+      return this.state.notes.map(item => {
+
+        return (
+          <Note
+            note_id={item.id}
+            user_id={item.user_id}
+            content={item.content}
+            color={item.color}
+            num_likes={item.num_likes}
+            created_at={item.created_at}
+            history={history}
+          />
+        );
+      });
     }
-  }
+  };
 
 
   render() {
@@ -35,16 +55,8 @@ class Board extends React.Component {
             <Menu />
           </div>
           <div className="board-box">
-            {/* <p>This is THE BOARD</p> */}
-            {/* INSERT API/RENDER NOTEs */}
-        
             <div className="notes">
-              <Note />
-              <Note />
-              <Note />
-              <Note />
-              <Note />
-              <Note />
+            {this.renderNotes()}
             </div>
         </div>
         <Footer />
