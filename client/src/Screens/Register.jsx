@@ -4,14 +4,14 @@ import BigPostIt from '../Shared Components/BigPostIt'
 
 function Register() {
     return (
-      <div id="note_main">
+      <div className="note_main">
           {/* <BigPostIt
           type="registration"
           /> */}
       <img 
       id="background"
-      className="img-responsive" 
-      src="https://i.imgur.com/PYvrnAk.jpg" 
+      className="img-responsive"
+      src="https://i.imgur.com/V324XgZ.jpg" 
       alt="brown corkboard background" 
       />
       <div id="blue-note"></div>

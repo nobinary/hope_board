@@ -4,13 +4,16 @@ import '../Style/Menu.scss'
 
 function Menu() {
     return (
-      <div className="menu_main">
-        <h1 id="main-title">MindBoard</h1>
+      <div className="col-md-12">
+        <Link className="header-link" to="/">
+        <h1>MindBoard</h1>
+        </Link>
+        <div className="horizontal-line"></div>
           {/* <p>This is a not-yet-hidden navigation menu</p> */}
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/myboard">My Board</Link>
+          <Link className="link" to="/">Home</Link>
+          <Link className="link" to="/login">Login</Link>
+          <Link className="link" to="/register">Register</Link>
+          <Link className="link" to="/myboard">My Board</Link>
           </div>
     );
   }

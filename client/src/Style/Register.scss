@@ -4,12 +4,12 @@ $primary-orange: rgb(255, 136, 0);
 $main-fonts: white;
 
 
-#note_main {
+.note_main {
     position: relative;
-    
 
     #background {
         max-width: 100%;
+        height: auto;
         position: relative;
         display: flex;
     }
