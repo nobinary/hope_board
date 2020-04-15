@@ -1,7 +1,28 @@
 
-.menu_main {
-    border: 2px solid black;
+.col-md-12 {
+    // border: 2px solid black;
     display: flex;
     flex-direction: column;
     width: 100px;
+
+    .header-link {
+        color: white;
+        font-weight: 700;
+    }
+
+    .horizontal-line {
+        background-color: white;
+        height: 6px;
+        width: 205px;
+    }
+
+    .link {
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
 }

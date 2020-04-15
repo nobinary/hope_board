@@ -50,8 +50,11 @@ class Board extends React.Component {
   render() {
     return (
       <div id="fp_main">
-        <img id="background" className="img-responsive" src="https://i.imgur.com/PYvrnAk.jpg" alt="brown corkboard background" />
-          <div class="board-menu">
+        id="background" 
+        className="img-responsive" 
+        src="https://i.imgur.com/V324XgZ.jpg" 
+        alt="brown corkboard background" />
+          <div className="board-menu">
             <Menu />
           </div>
           <div className="board-box">
