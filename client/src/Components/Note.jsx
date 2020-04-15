@@ -5,7 +5,7 @@ import '../Style/Note.scss'
 function Note(props) {
     return (
       <div id="note_main">
-          <div class="main_note">
+          <div className="main_note">
           <p> This is a Note</p>
           </div>
       </div>

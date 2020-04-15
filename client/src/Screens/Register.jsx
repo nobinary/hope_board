@@ -4,18 +4,18 @@ import BigPostIt from '../Shared Components/BigPostIt'
 
 function Register() {
     return (
-      <div id="note_main">
+      <div className="note_main">
           {/* <BigPostIt
           type="registration"
           /> */}
       <img 
       id="background"
-      class="img-responsive" 
-      src="https://i.imgur.com/PYvrnAk.jpg" 
+      className="img-responsive"
+      src="https://i.imgur.com/V324XgZ.jpg" 
       alt="brown corkboard background" 
       />
       <div id="blue-note"></div>
-      <main class="register-form">
+      <main className="register-form">
         <h1>Register</h1>
         <form id="register-input">
          <label id="label" for="name">
@@ -48,7 +48,7 @@ function Register() {
               <button 
               type="submit" 
               id="submit"
-              class="btn btn-default"
+              className="btn btn-default"
               >
                 Submit
               </button>
