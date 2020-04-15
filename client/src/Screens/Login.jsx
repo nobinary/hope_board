@@ -7,7 +7,7 @@ function Login() {
     <div id="note_main">
       <img 
       id="background" 
-      class="img-responsive" 
+      className="img-responsive" 
       src="https://i.imgur.com/PYvrnAk.jpg" 
       alt="brown corkboard background" 
       />
@@ -15,7 +15,7 @@ function Login() {
         type="login"
       /> */}
       <div id="yellow-note"></div>
-      <main class="login-form">
+      <main className="login-form">
         <p>Nice to see you again!</p>
         <h1>Login</h1>
         <form id="login-input">
@@ -42,7 +42,7 @@ function Login() {
         <button 
         type="submit" 
         id="submit"
-        class="btn btn-default"
+        className="btn btn-default"
         >
           Submit
           </button>

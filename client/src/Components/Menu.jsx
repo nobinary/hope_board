@@ -5,12 +5,13 @@ import '../Style/Menu.scss'
 function Menu() {
     return (
       <div className="menu_main">
-          <p>This is a not-yet-hidden navigation menu</p>
+        <h1 id="main-title">MindBoard</h1>
+          {/* <p>This is a not-yet-hidden navigation menu</p> */}
           <Link to="/">Home</Link>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
           <Link to="/myboard">My Board</Link>
-      </div>
+          </div>
     );
   }
   
