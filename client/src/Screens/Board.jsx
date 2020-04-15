@@ -30,7 +30,6 @@ class Board extends React.Component {
     console.log("renderstate" + this.state.notes);
     if (this.state.notes && this.state.notes.length > 0) {
       return this.state.notes.map(item => {
-
         return (
           <Note
             note_id={item.id}
@@ -50,6 +49,7 @@ class Board extends React.Component {
   render() {
     return (
       <div id="fp_main">
+        <img
         id="background" 
         className="img-responsive" 
         src="https://i.imgur.com/V324XgZ.jpg" 
