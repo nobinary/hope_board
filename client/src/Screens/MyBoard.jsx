@@ -11,8 +11,13 @@ class MyBoard extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <div className="myboard_main">
+        <img 
+        id="background" 
+        className="img-responsive" 
+        src="https://i.imgur.com/V324XgZ.jpg" 
+        alt="brown corkboard background" />
           <div className="board_menu">
             <Menu />
           </div>
@@ -38,7 +43,7 @@ class MyBoard extends React.Component {
           </div>
         </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }
