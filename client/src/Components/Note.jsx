@@ -12,18 +12,19 @@ class Note extends Component {
   }
 
  handleChange = (e) => {
-   this.setState({ 
+   let likeData = [{ 
    user_id: e.target.value, 
    note_id: e.target.name
-   })
-   console.log(this.State)
-  this.sendLike()
+   }]
+  //  console.log(likeData)
+  createLike(likeData)
   }
 
-  sendLike = () => {
-       console.log(this.State)
-      createLike(this.state)
-  }
+////ISSUE: setting state is delayed 
+  // sendLike = () => {
+  //     console.log(this.State)
+  //     createLike(this.state)
+  // }
     
     render() {
     return (
@@ -32,7 +33,7 @@ class Note extends Component {
           <p> {this.props.content}</p>
           <p> author: {this.props.user_id}</p>
           <p>date: 00/00/00
-            {/* date needs formatting on back end? */}
+          {/* date needs formatting on back end? */}
           {/* {props.created_at} */}
           </p>
           <div className="like_box">

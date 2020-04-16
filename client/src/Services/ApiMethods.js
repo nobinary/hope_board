@@ -23,8 +23,8 @@ export const fetchNotes = async () => {
   export const createLike = async (data) => {
     console.log(data)
     const likeData = {
-        user_id: data.user_id,
-        note_id: data.note_id,
+        user_id: data[0].user_id,
+        note_id: data[0].note_id,
     }  
 	try {
 		const resp = await Axios.post(`${Api}/likes`, likeData)
