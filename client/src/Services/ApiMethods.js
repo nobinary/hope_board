@@ -34,14 +34,31 @@ export const fetchNotes = async () => {
     }
 }   
 
-  // export const fetchMyFavorites = async (userID) => {
-  //   try {
-  //   const notes = await Axios.get(`'${Api}/mine/${userID}/favorites`)
-  //   return notes
-  //   } catch (error) {
-  //     console.log("Error: ", error)
-  //   }
-  // }
+///AUTH
+
+export const signUp = async credentials => {
+    console.log(credentials)
+    try {
+        const resp = await Axios.post(`${Api}'/sign-up'`, credentials)
+        localStorage.setItem('token', resp.data.token)
+        return resp.data
+    } catch (error) {
+        throw error
+    }
+}
+
+export const signInUser = async credentials => {
+  console.log(credentials)
+  try {
+    const resp = await Axios.post(`${Api}'/sign-in'`, credentials)
+    localStorage.setItem('token', resp.data.token)
+    return resp.data
+  } catch (error) {
+    throw error
+  }
+}
+
+
 
 
 
