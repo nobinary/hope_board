@@ -20,6 +20,20 @@ export const fetchNotes = async () => {
     }
   }
 
+  export const createLike = async (data) => {
+    console.log(data)
+    const likeData = {
+        user_id: data.user_id,
+        note_id: data.note_id,
+    }  
+	try {
+		const resp = await Axios.post(`${Api}/likes`, likeData)
+		return resp
+	} catch (error) {
+		throw error
+    }
+}   
+
   // export const fetchMyFavorites = async (userID) => {
   //   try {
   //   const notes = await Axios.get(`'${Api}/mine/${userID}/favorites`)
