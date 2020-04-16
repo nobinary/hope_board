@@ -46,12 +46,12 @@ class Login extends Component {
     const toggleForm = this.state.isError ? "danger" : "";
     if (this.state.isError) {
       return (
-        <button type="submit" className={toggleForm}>
+        <button type="submit" id="submit"  className={toggleForm, "btn btn-default"}>
           {this.state.errorMsg}
         </button>
       );
     } else {
-      return <button type="submit">Sign In</button>;
+      return <button type="submit" id="submit"  className="btn btn-default">Sign In</button>;
     }
   };
 
@@ -98,9 +98,10 @@ class Login extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit" id="submit" className="btn btn-default">
+            {/* <button type="submit" id="submit" className="btn btn-default">
               Submit
-            </button>
+            </button> */}
+            {this.renderError()}
           </form>
         </main>
       </div>
