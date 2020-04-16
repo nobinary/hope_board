@@ -17,17 +17,14 @@ class Board extends React.Component {
    const notes = fetchNotes();
    const self = this
   notes.then(function(data) { 
-  console.log(data.data)
   self.setState(state => ({
         notes: data.data
       }));
-      console.log(self.state.notes)
     });
   }
 
   renderNotes = () => {
     const { history } = this.props;
-    console.log("renderstate" + this.state.notes);
     if (this.state.notes && this.state.notes.length > 0) {
       return this.state.notes.map(item => {
         return (
