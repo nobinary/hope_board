@@ -1,8 +1,32 @@
 
 .main_note {
-    background-color: darkorange;
     padding: 30px;
     margin: 20px;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
+    font-size: 10px;
+}
+
+ .yellow {
+ background-color: yellow;
+}
+.green {
+     background-color: lightgreen;
+}
+.pink {
+     background-color: pink;
+}
+.blue{
+     background-color: lightblue;
+}
+.orange {
+     background-color: orange;
+}
+
+.like_box {
+    display: flex;
+}
+
+.like_content {
+    margin: 0 20px;
 }
