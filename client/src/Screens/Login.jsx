@@ -1,4 +1,5 @@
 import React from 'react'
+import Menu from '../Components/Menu'
 import BigPostIt from '../Shared Components/BigPostIt'
 import '../Style/Login.scss'
 
