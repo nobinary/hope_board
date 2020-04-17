@@ -15,6 +15,7 @@ class Board extends React.Component {
 
   componentDidMount() {
    const notes = fetchNotes();
+   console.log(notes)
    const self = this
   notes.then(function(data) { 
   self.setState(state => ({

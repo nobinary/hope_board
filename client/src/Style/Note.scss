@@ -1,3 +1,8 @@
+$primary-blue: rgb(0, 255, 225);
+$primary-yellow: rgb(255, 234, 0);
+$primary-magenta: rgb(255, 0, 179);
+$primary-orange: rgb(255, 136, 0);
+$primary-green: #28D701;
 
 .main_note {
     padding: 30px;
@@ -8,19 +13,19 @@
 }
 
  .yellow {
- background-color: yellow;
+ background-color: $primary-yellow;
 }
 .green {
-     background-color: lightgreen;
+     background-color: $primary-green;
 }
 .pink {
-     background-color: pink;
+     background-color: $primary-magenta;
 }
 .blue{
-     background-color: lightblue;
+     background-color: $primary-blue;
 }
 .orange {
-     background-color: orange;
+     background-color: $primary-orange;
 }
 
 .like_box {
