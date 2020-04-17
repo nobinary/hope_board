@@ -38,11 +38,11 @@ class Note extends Component {
           <div className="like_box">
           <button
           onClick={this.handleChange}
-          className="like_content"
+          className="btn btn-default"
           value={this.props.user_id}
           name={this.props.note_id}
           >LIKE</button>
-          <p className="like_content"> num likes: {this.props.num_likes}</p>
+          <p className="like_content">Likes: {this.props.num_likes}</p>
           </div>
           </div>
       </div>
