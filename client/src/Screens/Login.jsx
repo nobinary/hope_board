@@ -62,7 +62,7 @@ class Login extends Component {
         <img
           id="background"
           className="img-responsive"
-          src="https://i.imgur.com/PYvrnAk.jpg"
+          src="https://i.imgur.com/V324XgZ.jpg"
           alt="brown corkboard background"
         />
         {/* <BigPostIt

@@ -68,8 +68,13 @@ componentDidMount() {
 
   render() {
     return (
-      <div>
+      <>
         <div className="myboard_main">
+        <img 
+        id="background" 
+        className="img-responsive" 
+        src="https://i.imgur.com/V324XgZ.jpg" 
+        alt="brown corkboard background" />
           <div className="board_menu">
             <Menu />
           </div>
@@ -89,7 +94,7 @@ componentDidMount() {
           </div>
         </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }

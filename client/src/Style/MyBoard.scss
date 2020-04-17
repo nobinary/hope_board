@@ -1,17 +1,23 @@
 
 .myboard_main {
     display: flex;
-    border: 2px red solid;
-    height: 80vh;
+    position: relative;
+    // border: 2px red solid;
+}
+
+.board_menu {
+    position: absolute;
 }
 
 .myboard {
     display: flex;
+    position: absolute;
 }
 
 .mylists {
     border: 1px purple solid;
     width: 40vw;
+    margin-left: 30%;
 }
 
 .mynotes {
