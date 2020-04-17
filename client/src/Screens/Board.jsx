@@ -32,10 +32,12 @@ class Board extends React.Component {
           <Note
             note_id={item.id}
             user_id={item.user_id}
+            user_name={item.user_name}
             content={item.content}
             color={item.color}
             num_likes={item.num_likes}
             created_at={item.created_at}
+            ago_string={item.ago_string}
             history={history}
           />
         );

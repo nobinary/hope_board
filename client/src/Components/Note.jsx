@@ -31,11 +31,8 @@ class Note extends Component {
       <div id="note_main">
           <div className={ `main_note ${this.props.color}`}>
             <div className="date-from">
-          <p className="author-text"> From: {this.props.user_id}</p>
-          <p className="date-content">00/00/00
-          {/* date needs formatting on back end? */}
-          {/* {props.created_at} */}
-          </p>
+          <p className="author-text"> {this.props.user_name}</p>
+          <p className="date-content">{this.props.ago_string}</p>
           </div>
           <p className="text-content"> {this.props.content}</p>
           <div className="like_box">
