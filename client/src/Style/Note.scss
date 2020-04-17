@@ -4,15 +4,34 @@ $primary-magenta: rgb(255, 0, 179);
 $primary-orange: rgb(255, 136, 0);
 $primary-green: #28D701;
 
-.main_note {
-    padding: 30px;
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    font-size: 10px;
+
+#note_main {
+     display: grid;
+
+     .main_note {
+          padding: 30px;
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          font-size: 10px;
+      }
+
+      .date-from {
+           display: flex;
+           flex-direction: row;
+      }
+
+      .author-text {
+           margin-right: 10px;
+      }
+
+      .date-content {
+          margin-left: 50px;
+      }
 }
 
- .yellow {
+
+.yellow {
  background-color: $primary-yellow;
 }
 .green {

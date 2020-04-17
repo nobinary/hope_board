@@ -30,12 +30,14 @@ class Note extends Component {
     return (
       <div id="note_main">
           <div className={ `main_note ${this.props.color}`}>
-          <p> {this.props.content}</p>
-          <p> author: {this.props.user_id}</p>
-          <p>date: 00/00/00
+            <div className="date-from">
+          <p className="author-text"> From: {this.props.user_id}</p>
+          <p className="date-content">00/00/00
           {/* date needs formatting on back end? */}
           {/* {props.created_at} */}
           </p>
+          </div>
+          <p className="text-content"> {this.props.content}</p>
           <div className="like_box">
           <button
           onClick={this.handleChange}
