@@ -26,12 +26,18 @@ class Register extends Component {
   onSignUp = event => {
     event.preventDefault();
 
-    const { history, setUser } = this.props;
+    const { name, email, password } = this.state;
+    const userData = {
+      user: {
+        first_name: name.split(' ')[0],
+        last_name: name.split(' ')[1] || null,
+        email: email,
+        password: password
+      }
+    }
 
-    signUp(this.state)
+    signUp(userData)
       .then(() => signInUser(this.state))
-      .then(res => setUser(res.user))
-      .then(() => history.push("/"))
       .catch(error => {
         console.error(error);
         this.setState({
@@ -40,7 +46,7 @@ class Register extends Component {
           password: "",
           passwordConfirmation: "",
           isError: true,
-          errorMsg: "Passwords do not match"
+          errorMsg: error
         });
       });
   };
