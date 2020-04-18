@@ -30,7 +30,7 @@ class Register extends Component {
     const userData = {
       user: {
         first_name: name.split(' ')[0],
-        last_name: name.split(' ')[1] || null,
+        last_name: name.split(' ')[1] || 'noLastName',
         email: email,
         password: password
       }
