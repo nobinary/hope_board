@@ -25,12 +25,12 @@ $main-fonts: white;
     }
 
     #blue-note {
-        height: 500px;
-        width: 550px;
+        height: 600px;
+        width: 600px;
         background-color: $primary-blue;
         position: absolute;
         transform: rotate(5deg);
-        top: 22%;
+        top: 18%;
         left: 40%;
         box-shadow: 10px 10px 50px #1C1C1C;
     }
@@ -40,10 +40,10 @@ $main-fonts: white;
 .register-form {
     position: absolute;
     background-color: $primary-magenta;
-    top: 14%;
+    top: 12%;
     left: 30%;
-    height: 500px;
-    width: 550px;
+    height: 600px;
+    width: 600px;
     color: $main-fonts;
     padding-top: 30px;
     box-shadow: 10px 20px 50px #373737;
