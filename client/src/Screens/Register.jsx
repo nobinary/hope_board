@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../Style/Register.scss";
 import { signUp, signInUser } from '../Services/ApiMethods'
+import Menu from '../Components/Menu'
 import BigPostIt from "../Shared Components/BigPostIt";
 
 class Register extends Component {
@@ -69,6 +70,9 @@ class Register extends Component {
           src="https://i.imgur.com/V324XgZ.jpg"
           alt="brown corkboard background"
         />
+        <div className="nav-link">
+          <Menu />
+        </div>
         <div id="blue-note"></div>
         <main className="register-form">
           <h1>Register</h1>
