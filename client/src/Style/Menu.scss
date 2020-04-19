@@ -10,6 +10,10 @@
         font-weight: 700;
     }
 
+    #navbarSideButton {
+        color: white;
+    }
+
     .horizontal-line {
         background-color: white;
         height: 6px;
@@ -25,4 +29,28 @@
         cursor: pointer;
     }
 
+    .navbar-side {
+        height: 100%;
+        width: 25%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0;
+        list-style: none;
+        border-right: 2px solid #ccc;
+        overflow-y: scroll;
+        z-index: 1000;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: 300ms ease;
+        transition: 300ms ease;
+    }
+
+    .navbar-side-item {
+        padding: 1.5rem 0;
+        margin: 0;
+        border-bottom: 2px solid #ccc;
+        height: 5rem;
+    }
 }
