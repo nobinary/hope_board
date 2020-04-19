@@ -25,12 +25,12 @@ $main-fonts: white;
     }
 
     #yellow-note {
-        height: 500px;
-        width: 550px;
+        height: 600px;
+        width: 600px;
         background-color: $primary-yellow;
         position: absolute;
         transform: rotate(-10deg);
-        top: 22%;
+        top: 18%;
         left: 40%;
         box-shadow: 10px 10px 50px #1C1C1C;
     }
@@ -39,12 +39,16 @@ $main-fonts: white;
 .login-form {
     position: absolute;
     background-color: $primary-blue;
-    top: 14%;
+    top: 12%;
     left: 30%;
-    height: 500px;
-    width: 550px;
+    height: 600px;
+    width: 600px;
     box-shadow: 10px 20px 50px #373737;
     color: $main-fonts;
+
+    .greeting {
+        margin-top: 30px;
+    }
 
     p {
         padding-top: 30px;
@@ -62,7 +66,7 @@ $main-fonts: white;
             flex-direction: column;
             font-size: 20px;
             font-weight: 600;
-            margin-top: 15px;
+            margin-top: 30px;
             margin-left: 17%;
             margin-bottom: 7px;
         }
@@ -89,7 +93,7 @@ $main-fonts: white;
             font-size: 25px;
             font-weight: 700;
             margin-left: 35%;
-            margin-top: 40px;
+            margin-top: 45px;
             border: #DD0097;
             box-shadow: 1px 1px 2px black;
         }
