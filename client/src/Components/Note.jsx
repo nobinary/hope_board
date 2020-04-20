@@ -40,8 +40,8 @@ class Note extends Component {
           <img
           src="https://i.imgur.com/Dh7Znb8.png"
           onClick={this.handleChange}
-          className="btn btn-default"
-          className="like-button"
+          className="like-button btn btn-default"
+          // className="like-button"
           value={this.props.user_id}
           name={this.props.note_id}
           />
