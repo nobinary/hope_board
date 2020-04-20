@@ -3,8 +3,8 @@ import Axios from 'axios'
 
 export const fetchNotes = async () => {
     try {
-    const notes = await Axios.get(`${Api}/notes`)
-    return notes
+      const notes = await Api.get(`/notes`)
+      return notes
     } catch (error) {
       console.log("Error: ", error)
     }
@@ -12,7 +12,7 @@ export const fetchNotes = async () => {
 
   export const fetchMyLists = async (userID) => {
     try {
-    const notes = await Axios.get(`${Api}/mine/${userID}`)
+    const notes = await Api.get(`/mine/${userID}`)
     console.log(`${Api}/mine/${userID}/notes`)
     return notes
     } catch (error) {
@@ -39,7 +39,7 @@ export const fetchNotes = async () => {
 export const signUp = async credentials => {
     console.log(credentials)
     try {
-        const resp = await Axios.post(`${Api}'/sign-up'`, credentials)
+        const resp = await Api.post(`users/register`, credentials)
         localStorage.setItem('token', resp.data.token)
         return resp.data
     } catch (error) {
@@ -48,9 +48,9 @@ export const signUp = async credentials => {
 }
 
 export const signInUser = async credentials => {
-  console.log(credentials)
+  console.log('signInUser credentials', credentials)
   try {
-    const resp = await Axios.post(`${Api}'/sign-in'`, credentials)
+    const resp = await Api.post(`users/login`, credentials)
     localStorage.setItem('token', resp.data.token)
     return resp.data
   } catch (error) {

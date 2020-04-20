@@ -9,7 +9,7 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
+      email: "",
       password: "",
       isError: false,
       errorMsg: ""
@@ -27,11 +27,8 @@ class Login extends Component {
   onSignIn = event => {
     event.preventDefault();
 
-    const { history, setUser } = this.props;
-
     signInUser(this.state)
-      .then(res => setUser(res.user))
-      .then(() => history.push("/"))
+      .then(resp => console.log(resp))
       .catch(error => {
         console.error(error);
         this.setState({
@@ -57,7 +54,7 @@ class Login extends Component {
   };
 
   render() {
-    const { username, password } = this.state;
+    const { email, password } = this.state;
     return (
       <div id="note_main">
         <img
@@ -78,15 +75,15 @@ class Login extends Component {
           <h1>Login</h1>
           <form id="login-input" onSubmit={this.onSignIn}>
             <label id="label" for="username">
-              Username
+              Your Email
             </label>
             <input
               type="text"
               placeholder="Enter your username"
               id="input"
               required
-              name="username"
-              value={username}
+              name="email"
+              value={email}
               onChange={this.handleChange}
             />
             <label id="label" for="password">
