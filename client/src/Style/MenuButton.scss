@@ -1,5 +1,6 @@
 #hamburgerButton {
-    margin-left: 40px;
+    display: flex;
+    margin-left: 70px;
     width: 50px;
     outline: none;
     transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);

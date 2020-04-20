@@ -12,6 +12,7 @@ export default class Menu extends Component {
       visibility = "show";
     }
     return (
+      <div className="menu-nav">
       <div id="flyoutMenu"
       onMouseUp={this.props.handleMouseDown}
       className={visibility}>
@@ -27,6 +28,7 @@ export default class Menu extends Component {
         <h2>
           <Link 
         className="link" to="/myboard">My Board</Link></h2>
+      </div>
       </div>
     )
 
