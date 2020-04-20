@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
 // import BigPostIt from "../Shared Components/BigPostIt";
-import Menu from '../Components/Menu'
+import MenuContainer from '../Components/MenuContainer'
 import "../Style/Login.scss";
 
 class Login extends Component {
@@ -70,7 +70,7 @@ class Login extends Component {
         type="login"
       /> */}
       <div className="nav-bar">
-      <Menu />
+      <MenuContainer />
       </div>
         <div id="yellow-note"></div>
         <main className="login-form">

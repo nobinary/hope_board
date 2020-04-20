@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "../Components/Menu";
+import MenuContainer from "../Components/MenuContainer";
 import Note from "../Components/Note";
 import {fetchMyLists} from '../Services/ApiMethods'
 import Footer from "../Components/Footer";
@@ -74,9 +74,10 @@ componentDidMount() {
         id="background" 
         className="img-responsive" 
         src="https://i.imgur.com/V324XgZ.jpg" 
-        alt="brown corkboard background" />
+        alt="brown corkboard background" 
+        />
           <div className="board_menu">
-            <Menu />
+            <MenuContainer />
           </div>
           <div className="myboard">
             <div className="mylists">

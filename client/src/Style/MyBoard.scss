@@ -2,12 +2,12 @@
 .myboard_main {
     display: flex;
     position: relative;
-    // border: 2px red solid;
 }
 
 .board_menu {
     position: absolute;
-    margin-top: 45px;
+    top: 5%;
+    left: 0;
 }
 
 .myboard {

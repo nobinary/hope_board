@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Style/Register.scss";
 import { signUp, signInUser } from '../Services/ApiMethods'
-import Menu from '../Components/Menu'
+import MenuContainer from '../Components/MenuContainer'
 import BigPostIt from "../Shared Components/BigPostIt";
 
 class Register extends Component {
@@ -71,7 +71,7 @@ class Register extends Component {
           alt="brown corkboard background"
         />
         <div className="nav-link">
-          <Menu />
+          <MenuContainer />
         </div>
         <div id="blue-note"></div>
         <main className="register-form">
