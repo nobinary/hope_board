@@ -7,15 +7,23 @@
 
 .board_menu {
     position: absolute;
+    margin-top: 45px;
 }
 
 .myboard {
     display: flex;
     position: absolute;
+    margin-top: 20px;
+
+    .my-board-header {
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
 
 .mylists {
-    border: 1px purple solid;
+    // border: 1px purple solid;
     width: 40vw;
     margin-left: 30%;
 }

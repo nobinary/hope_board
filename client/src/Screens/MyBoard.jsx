@@ -80,13 +80,13 @@ componentDidMount() {
           </div>
           <div className="myboard">
             <div className="mylists">
-              <p>This is MY POSTS</p>
+              <p className="my-board-header">My Posts</p>
               <div className="mynotes">
                {this.renderMyNotes()}
               </div>
             </div>
             <div className="mylists">
-              <p>This is MY FAVORITES</p>
+              <p className="my-board-header">My Favorites</p>
               <div className="mynotes">
                {this.renderMyFavorites()}
               </div>
