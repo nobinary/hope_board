@@ -36,13 +36,15 @@ class Note extends Component {
           </div>
           <p className="text-content"> {this.props.content}</p>
           <div className="like_box">
-          <button
+          <p className="like_content">Likes: {this.props.num_likes}</p>
+          <img
+          src="https://i.imgur.com/Dh7Znb8.png"
           onClick={this.handleChange}
           className="btn btn-default"
+          className="like-button"
           value={this.props.user_id}
           name={this.props.note_id}
-          >LIKE</button>
-          <p className="like_content">Likes: {this.props.num_likes}</p>
+          />
           </div>
           </div>
       </div>

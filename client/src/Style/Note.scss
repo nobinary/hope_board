@@ -20,12 +20,13 @@ $primary-green: #28D701;
       }
 
       .date-from {
-           display: flex;
-           flex-direction: row;
+           display: inline-flex;
+           text-align: right;
       }
 
       .author-text {
-           margin-right: 10px;
+           display: inline-flex;
+           text-align: left;
       }
 
       .date-content {
@@ -52,4 +53,16 @@ $primary-green: #28D701;
 
 .like_box {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .like-button {
+          height: 20px;
+          margin-top: 20px;
+     }
+
+    .like_content {
+         margin-top: 20px;
+    }
 }
+
