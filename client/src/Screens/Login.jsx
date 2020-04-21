@@ -72,7 +72,7 @@ class Login extends Component {
         <div id="yellow-note"></div>
         <main className="login-form">
           <p className="greeting">Nice to see you again!</p>
-          <h1>Login</h1>
+          <h1 className="login-header">Login</h1>
           <form id="login-input" onSubmit={this.onSignIn}>
             <label id="label" for="username">
               Your Email

@@ -1,8 +1,13 @@
 #hamburgerButton {
     display: flex;
-    margin-left: 70px;
-    width: 50px;
-    outline: none;
+    margin-left: 20px;
+    // width: 50px;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    outline: transparent;
+    background-color: transparent;
+    cursor: pointer;
     transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
 
 
