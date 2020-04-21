@@ -35,8 +35,6 @@ class Note extends Component {
           <p className="author-text"> {this.props.user_name}</p>
           <p className="date-content">{this.props.ago_string}</p>
           </div>
-          <div className="like_box">
-
           {/* USE FOR NOTE MODAL */}
           {/* <p className="like_content">Likes: {this.props.num_likes}</p> */}
           {/* <img
@@ -47,7 +45,6 @@ class Note extends Component {
           value={this.props.user_id}
           name={this.props.note_id}
           /> */}
-          </div>
           </div>
       </div>
     );

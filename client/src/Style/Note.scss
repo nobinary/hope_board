@@ -6,8 +6,7 @@ $primary-green: #28D701;
 
 
 #note_main {
-
-
+     display: flex;
 
      .main_note {
           padding: 25px;
@@ -17,18 +16,25 @@ $primary-green: #28D701;
           width: 200px;
           height: 200px;
           font-size: 10px;
+          box-shadow: 10px 10px 50px #1C1C1C;
       }
 
       .date-from {
            display: inline-flex;
            text-align: right;
            flex-direction: row;
+           margin-top: 50px;
       }
 
       .author-text {
            display: inline;
            text-align: left;
            margin-right: 10px;
+      }
+
+      .text-content {
+           margin-top: 2px;
+           line-height: 20px;
       }
 
      //  .date-content {
