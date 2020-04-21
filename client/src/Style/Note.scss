@@ -6,7 +6,7 @@ $primary-green: #28D701;
 
 
 #note_main {
-     display: flex;
+
 
 
      .main_note {
@@ -22,16 +22,18 @@ $primary-green: #28D701;
       .date-from {
            display: inline-flex;
            text-align: right;
+           flex-direction: row;
       }
 
       .author-text {
-           display: inline-flex;
+           display: inline;
            text-align: left;
+           margin-right: 10px;
       }
 
-      .date-content {
-          margin-left: 50px;
-      }
+     //  .date-content {
+     //      margin-left: 50px;
+     //  }
 }
 
 
