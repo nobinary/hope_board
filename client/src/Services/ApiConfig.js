@@ -10,13 +10,18 @@ export const TOKEN_KEY = 'sample.key';
 
 const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'http://hope-board-api.herokuapp.com'
 
-const Api = Axios.create({
+let Api;
+export const createApi = () => {
+  console.log(`createApi running...`)
+  Api = Axios.create({
   baseURL: apiUrl,
   headers: {
 	Authorization: `Bearer ${JwtToken()}`,
     'Access-Control-Allow-Origin': '*'
-  }
-})
+    }
+  })
+}
+createApi();
 
 export default Api
 

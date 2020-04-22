@@ -42,24 +42,23 @@ class Note extends Component {
     return (
       <div id="note_main">
           <div className={ `main_note ${this.props.color}`}>
-          <p className="text-content"> {this.props.content}</p>
+            <p className="text-content"> {this.props.content}</p>
             <div className="date-from">
-          <p className="author-text"> {this.props.user_name}</p>
-          <p className="date-content">{this.props.ago_string}</p>
-          </div>
-          <p className="text-content"> {this.props.content}</p>
-          <div className="like_box">
-          <p className="like_content">Likes: {this.state.num_likes}</p>
-          <img
-          src="https://i.imgur.com/Dh7Znb8.png"
-          onClick={this.clickLike}
-          className="like-button btn btn-default"
-          value={this.props.user_id}
-          name={this.props.note_id}
-          />
-          {this.state.user_likes ? `XXXXX` : ``}
-          {/* replace XXXXX with real user feedback */}
-          </div>
+              <p className="author-text"> {this.props.user_name}</p>
+              <p className="date-content">{this.props.ago_string}</p>
+            </div>
+            <div className="like_box">
+              <p className="like_content">Likes: {this.state.num_likes}</p>
+              <img
+              src="https://i.imgur.com/Dh7Znb8.png"
+              onClick={this.clickLike}
+              className="like-button btn btn-default"
+              value={this.props.user_id}
+              name={this.props.note_id}
+              />
+              {this.state.user_likes ? `XXXXX` : ``}
+              {/* replace XXXXX with real user feedback */}
+            </div>
           </div>
       </div>
     );

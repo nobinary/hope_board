@@ -1,5 +1,5 @@
 import Api from './ApiConfig'
-import Axios from 'axios'
+import { createApi } from './ApiConfig'
 
 export const fetchNotes = async () => {
     try {
@@ -65,6 +65,7 @@ export const signInUser = async credentials => {
   try {
     const resp = await Api.post(`users/login`, credentials)
     await localStorage.setItem('token', resp.data.token)
+    createApi();
     return resp.data
   } catch (error) {
     return {error: error}
