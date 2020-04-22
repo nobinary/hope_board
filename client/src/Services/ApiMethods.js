@@ -17,7 +17,7 @@ export const fetchNotes = async () => {
     //     content: note[0].content,
     // }  
 	try {
-		const resp = await Axios.post(`${Api}/notes`, note)
+		const resp = await Api.post(`/notes`, note)
 		return resp
 	} catch (error) {
 		throw error
@@ -27,7 +27,6 @@ export const fetchNotes = async () => {
   export const fetchMyLists = async (userID) => {
     try {
     const notes = await Api.get(`/mine/${userID}`)
-    console.log(`${Api}/mine/${userID}/notes`)
     return notes
     } catch (error) {
       console.log("Error: ", error)
