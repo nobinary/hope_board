@@ -38,6 +38,7 @@ class Register extends Component {
 
     signUp(userData)
       .then(() => signInUser(this.state))
+      .then(() => this.props.setUser())
       .catch(error => {
         console.error(error);
         this.setState({

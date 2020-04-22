@@ -7,34 +7,63 @@ import Register from './Screens/Register'
 import CreateNote from './Components/CreateNote'
 import About from './Components/About'
 import {Switch, Route} from 'react-router-dom'
+import userData from './Services/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <Switch>
-          <Route path="/about">
-            <About/>
-          </Route>
-          <Route path="/createnote">
-            <CreateNote/>
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/myboard">
-            <MyBoard/>
-          </Route>
-          <Route path="/">
-            <Board />
-          </Route>
-        </Switch>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      userId: null
+    };
+  }
+
+  componentDidMount = async () => {
+    this.setUser();
+  }
+
+  setUser = async () => {
+
+    const user = await userData().user;
+
+    if (user) {
+      this.setState({
+        userId: user.id,
+        userEmail: user.email,
+        userFirstName: user.first_name,
+        userLastName: user.last_name
+      })
+    }
+  }
+
+  render () {
+    return (
+      <div className="App">
+        <Switch>
+            <Route path="/about">
+              <About/>
+            </Route>
+            <Route path="/createnote">
+              <CreateNote/>
+            </Route>
+            <Route path="/register">
+              <Register setUser={this.setUser} />
+            </Route>
+            <Route path="/login">
+              <Login setUser={this.setUser} />
+            </Route>
+            <Route path="/myboard">
+              <MyBoard/>
+            </Route>
+            <Route path="/">
+              <Board userId={this.state.userId} />
+            </Route>
+          </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
