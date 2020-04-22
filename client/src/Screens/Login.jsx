@@ -1,7 +1,6 @@
 import React from "react";
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
-// import BigPostIt from "../Shared Components/BigPostIt";
 import MenuContainer from '../Components/MenuContainer'
 import "../Style/Login.scss";
 
