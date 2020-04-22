@@ -10,6 +10,20 @@ export const fetchNotes = async () => {
     }
   }
 
+  export const postNote = async (note) => {
+    console.log(note)
+    // const noteData = {
+    //     user_id: note[0].user_id,
+    //     content: note[0].content,
+    // }  
+	try {
+		const resp = await Axios.post(`${Api}/notes`, note)
+		return resp
+	} catch (error) {
+		throw error
+    }
+}   
+
   export const fetchMyLists = async (userID) => {
     try {
     const notes = await Api.get(`/mine/${userID}`)
