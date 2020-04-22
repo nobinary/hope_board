@@ -6,6 +6,7 @@
 
 .board_menu {
     position: absolute;
+    cursor: pointer;
     top: 2%;
     left: 1%;
 }
@@ -19,6 +20,7 @@
         color: white;
         font-size: 30px;
         font-weight: 700;
+        margin-left: 31px;
     }
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import BigPostIt from '../Shared Components/BigPostIt'
+import NoteModal from '../Components/NoteModal'
+// import Modal from '../Components/Modal'
 
 function CreateNote() {
     return (
       <div>
-          <BigPostIt
-          type="create note"/>
+          {/* <NoteModal /> */}
       </div>
     );
   }
