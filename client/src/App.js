@@ -21,7 +21,13 @@ class App extends React.Component {
   }
 
   componentDidMount = async () => {
-    const user = await userData.user;
+    this.setUser();
+  }
+
+  setUser = async () => {
+
+    const user = await userData().user;
+
     if (user) {
       this.setState({
         userId: user.id,
@@ -43,16 +49,16 @@ class App extends React.Component {
               <CreateNote/>
             </Route>
             <Route path="/register">
-              <Register />
+              <Register setUser={this.setUser} />
             </Route>
             <Route path="/login">
-              <Login />
+              <Login setUser={this.setUser} />
             </Route>
             <Route path="/myboard">
               <MyBoard/>
             </Route>
             <Route path="/">
-              <Board userID={this.state.userId} />
+              <Board userId={this.state.userId} />
             </Route>
           </Switch>
       </div>

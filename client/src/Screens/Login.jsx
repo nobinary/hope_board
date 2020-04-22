@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from 'react-router-dom';
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
 // import BigPostIt from "../Shared Components/BigPostIt";
@@ -24,21 +25,30 @@ class Login extends Component {
     });
   };
 
-  onSignIn = event => {
+  onSignIn = async (event) => {
     event.preventDefault();
 
     const { email, password } = this.state
-    signInUser({email: email, password: password})
-      .then(resp => console.log(resp))
-      .catch(error => {
-        console.error(error);
-        this.setState({
-          isError: true,
-          errorMsg: "Invalid Credentials",
-          username: "",
-          password: ""
-        });
+    const response = await signInUser({email: email, password: password})
+    console.log(`resp:`, response);
+    if (response.user) {
+      await this.props.setUser();
+    } else {
+      this.setState({
+        isError: true,
+        errorMsg: "Invalid Credentials",
+        username: "",
+        password: ""
       });
+    }
+      // activeUser.then(resp => resp.json())
+      // .then(resp => resp.user)
+      // .catch(error => {
+      //   console.error(error);
+
+      // });
+    // if (activeUser) {
+    // }
   };
 
   renderError = () => {

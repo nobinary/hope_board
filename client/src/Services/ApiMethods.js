@@ -21,13 +21,13 @@ export const fetchNotes = async () => {
   }
 
   export const createLike = async (data) => {
-    console.log(data)
-    const likeData = {
-        user_id: data[0].user_id,
-        note_id: data[0].note_id,
-    }  
+    // console.log(data)
+    // const likeData = {
+    //     user_id: data[0].user_id,
+    //     note_id: data[0].note_id,
+    // }  
 	try {
-		const resp = await Axios.post(`${Api}/likes`, likeData)
+		const resp = await Api.post(`/likes`, data)
 		return resp
 	} catch (error) {
 		throw error
@@ -51,10 +51,10 @@ export const signInUser = async credentials => {
   console.log('signInUser credentials', credentials)
   try {
     const resp = await Api.post(`users/login`, credentials)
-    localStorage.setItem('token', resp.data.token)
+    await localStorage.setItem('token', resp.data.token)
     return resp.data
   } catch (error) {
-    throw error
+    return {error: error}
   }
 }
 

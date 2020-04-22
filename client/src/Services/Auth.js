@@ -1,16 +1,19 @@
 import JWT from 'jsonwebtoken';
 
-const JwtToken = localStorage.getItem('token') || null;
+let JwtToken = localStorage.getItem('token') || null;
 const TOKEN_KEY = 'holocene_slaughter!666';
 const verify = () => {
     try {
         const data = JWT.verify(JwtToken, TOKEN_KEY);
-        console.log('data: ', data);
+        console.log('verified data: ', data);
         return data;
     } catch (error) {
         return error;
     }
 }
-const userData = verify();
+const userData = () => {
+    JwtToken = localStorage.getItem('token') || null;
+    return verify();
+}
 
 export default userData;
