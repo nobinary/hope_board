@@ -16,12 +16,17 @@ $main-fonts: white;
 
     .nav-link {
         position: absolute;
-        top: 45px;
+        top: 2%;
+        // left: 1%;
     }
 
     #register-title {
         position: absolute;
         color: $main-fonts;
+    }
+
+    .register-header {
+        text-align: center;
     }
 
     #blue-note {
@@ -78,6 +83,7 @@ $main-fonts: white;
 
         #member-link {
             margin-top: 30px;
+            text-align: center;
         }
 
         #submit {

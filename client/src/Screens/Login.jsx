@@ -2,7 +2,6 @@ import React from "react";
 import { Redirect } from 'react-router-dom';
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
-// import BigPostIt from "../Shared Components/BigPostIt";
 import MenuContainer from '../Components/MenuContainer'
 import "../Style/Login.scss";
 
@@ -83,7 +82,7 @@ class Login extends Component {
         <div id="yellow-note"></div>
         <main className="login-form">
           <p className="greeting">Nice to see you again!</p>
-          <h1>Login</h1>
+          <h1 className="login-header">Login</h1>
           <form id="login-input" onSubmit={this.onSignIn}>
             <label id="label" htmlFor="username">
               Your Email

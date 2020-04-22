@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../Style/Register.scss";
 import { signUp, signInUser } from '../Services/ApiMethods'
 import MenuContainer from '../Components/MenuContainer'
-import BigPostIt from "../Shared Components/BigPostIt";
 
 class Register extends Component {
   constructor() {
@@ -82,7 +81,7 @@ class Register extends Component {
         </div>
         <div id="blue-note"></div>
         <main className="register-form">
-          <h1>Register</h1>
+          <h1 className="register-header">Register</h1>
           <form id="register-input" onSubmit={this.onSignUp}>
             <label id="label" for="name">
               Name

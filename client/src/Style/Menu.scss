@@ -1,16 +1,18 @@
 
 #main-title {
-    color: white;
+    // color: white;
     font-size: 30px;
 }
 
 #flyoutMenu {
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
+    margin-top: 80px;
+    margin-left: 37px;
     transition: transform .3s
             cubic-bezier(0, .52, 0, 1);
     overflow: scroll;
@@ -27,8 +29,7 @@
 }
 
 #flyoutMenu h2 .link {
-    color: black;
-    margin-left: 15px;
+    color: white;
     text-decoration: none;
 }
 

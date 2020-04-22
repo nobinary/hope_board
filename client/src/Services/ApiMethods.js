@@ -10,10 +10,23 @@ export const fetchNotes = async () => {
     }
   }
 
+  export const postNote = async (note) => {
+    console.log(note)
+    // const noteData = {
+    //     user_id: note[0].user_id,
+    //     content: note[0].content,
+    // }  
+	try {
+		const resp = await Api.post(`/notes`, note)
+		return resp
+	} catch (error) {
+		throw error
+    }
+}   
+
   export const fetchMyLists = async (userID) => {
     try {
     const notes = await Api.get(`/mine/${userID}`)
-    console.log(`${Api}/mine/${userID}/notes`)
     return notes
     } catch (error) {
       console.log("Error: ", error)
