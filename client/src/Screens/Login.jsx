@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
 import MenuContainer from '../Components/MenuContainer'
@@ -32,6 +32,7 @@ class Login extends Component {
     console.log(`resp:`, response);
     if (response.user) {
       await this.props.setUser();
+      this.props.history.push('/')
     } else {
       this.setState({
         isError: true,
@@ -120,4 +121,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
