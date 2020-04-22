@@ -81,7 +81,7 @@ class Register extends Component {
         </div>
         <div id="blue-note"></div>
         <main className="register-form">
-          <h1>Register</h1>
+          <h1 className="register-header">Register</h1>
           <form id="register-input" onSubmit={this.onSignUp}>
             <label id="label" for="name">
               Name
