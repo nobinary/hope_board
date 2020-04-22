@@ -27,7 +27,8 @@ class Login extends Component {
   onSignIn = event => {
     event.preventDefault();
 
-    signInUser(this.state)
+    const { email, password } = this.state
+    signInUser({email: email, password: password})
       .then(resp => console.log(resp))
       .catch(error => {
         console.error(error);
@@ -74,7 +75,7 @@ class Login extends Component {
           <p className="greeting">Nice to see you again!</p>
           <h1>Login</h1>
           <form id="login-input" onSubmit={this.onSignIn}>
-            <label id="label" for="username">
+            <label id="label" htmlFor="username">
               Your Email
             </label>
             <input
@@ -86,7 +87,7 @@ class Login extends Component {
               value={email}
               onChange={this.handleChange}
             />
-            <label id="label" for="password">
+            <label id="label" htmlFor="password">
               Password
             </label>
             <input
