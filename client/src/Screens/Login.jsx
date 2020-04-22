@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from 'react-router-dom';
 import { Component } from "react";
 import { signInUser } from "../Services/ApiMethods";
 import MenuContainer from '../Components/MenuContainer'
@@ -23,20 +24,30 @@ class Login extends Component {
     });
   };
 
-  onSignIn = event => {
+  onSignIn = async (event) => {
     event.preventDefault();
 
-    signInUser(this.state)
-      .then(resp => console.log(resp))
-      .catch(error => {
-        console.error(error);
-        this.setState({
-          isError: true,
-          errorMsg: "Invalid Credentials",
-          username: "",
-          password: ""
-        });
+    const { email, password } = this.state
+    const response = await signInUser({email: email, password: password})
+    console.log(`resp:`, response);
+    if (response.user) {
+      await this.props.setUser();
+    } else {
+      this.setState({
+        isError: true,
+        errorMsg: "Invalid Credentials",
+        username: "",
+        password: ""
       });
+    }
+      // activeUser.then(resp => resp.json())
+      // .then(resp => resp.user)
+      // .catch(error => {
+      //   console.error(error);
+
+      // });
+    // if (activeUser) {
+    // }
   };
 
   renderError = () => {
@@ -73,7 +84,7 @@ class Login extends Component {
           <p className="greeting">Nice to see you again!</p>
           <h1 className="login-header">Login</h1>
           <form id="login-input" onSubmit={this.onSignIn}>
-            <label id="label" for="username">
+            <label id="label" htmlFor="username">
               Your Email
             </label>
             <input
@@ -85,7 +96,7 @@ class Login extends Component {
               value={email}
               onChange={this.handleChange}
             />
-            <label id="label" for="password">
+            <label id="label" htmlFor="password">
               Password
             </label>
             <input

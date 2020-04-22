@@ -27,9 +27,10 @@ class Board extends React.Component {
   renderNotes = () => {
     const { history } = this.props;
     if (this.state.notes && this.state.notes.length > 0) {
-      return this.state.notes.map(item => {
+      return this.state.notes.map((item, index) => {
         return (
           <Note
+            key={index}
             note_id={item.id}
             user_id={item.user_id}
             user_name={item.user_name}
@@ -39,6 +40,7 @@ class Board extends React.Component {
             created_at={item.created_at}
             ago_string={item.ago_string}
             history={history}
+            activeId={this.props.userId}
           />
         );
       });
