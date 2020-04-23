@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {createLike} from '../Services/ApiMethods'
+import {createLike, deleteLike } from '../Services/ApiMethods'
 import '../Style/Note.scss'
 
 class Note extends Component {
@@ -22,13 +22,25 @@ class Note extends Component {
     note_id: e.target.name
     }
     // console.log(likeData)
-    try {
-      const res = await createLike(likeData);
-      if (res.status == 201) {
-        this.setState(state => ({ num_likes: state.num_likes++, user_likes: true }))
+
+    if (this.state.user_likes === false) {
+      try {
+        const res = await createLike(likeData);
+        if (res.status == 201) {
+          this.setState(state => ({ num_likes: state.num_likes++, user_likes: true }))
+        }
+      } catch (error) {
+        this.setState({error_msg: error})
       }
-    } catch (error) {
-      this.setState({error_msg: error})
+    } else {
+      try {
+        const res = await deleteLike(likeData);
+        if (res.status == 200) {
+          this.setState(state => ({ num_likes: state.num_likes--, user_likes: false }))
+        }
+      } catch (error) {
+        this.setState({error_msg: error})
+      }
     }
   }
 

@@ -47,6 +47,15 @@ export const fetchNotes = async () => {
     }
 }   
 
+  export const deleteLike = async (data) => {
+    try {
+      const resp = await Api.post(`/likes/delete`, data)
+      return resp
+    } catch (error) {
+      throw error
+      }
+  }   
+
 ///AUTH
 
 export const signUp = async credentials => {
