@@ -2,7 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal'
 // import Modal from "../Components/Modal"
 // import PropTypes from "prop-types";
-import '../Style/Modal.scss'
+import '../Style/NoteModal.scss'
 
 class NoteModal extends React.Component {
     constructor() {
@@ -41,8 +41,27 @@ class NoteModal extends React.Component {
                overlayClassName="Overlay"
                onRequestClose={this.handleCloseModal}
             >
-              <div>Create Note</div>
-              <button onClick={this.handleCloseModal}>Post</button>
+              <form className="create-form">
+                <textarea 
+                type="text"
+                placeholder="Write thoughts down here..."
+                className="input"></textarea>
+                
+              </form>
+              <button 
+                type="submit"
+                id="post-button"
+                className="btn btn-default"
+                >
+                  Post
+                  </button>
+              <img 
+              src="https://i.imgur.com/ZNxnsdO.png"
+              onClick={this.handleCloseModal}
+              className="btn btn-default"
+              id="close-button"
+              />
+                  
             </ReactModal>
           </div>
         )
