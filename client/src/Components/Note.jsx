@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {createLike, deleteLike } from '../Services/ApiMethods'
+import {createLike, deleteLike, deleteNote } from '../Services/ApiMethods'
 import '../Style/Note.scss'
 
 class Note extends Component {
@@ -9,7 +9,7 @@ class Note extends Component {
      user_likes: false,
      num_likes: '',
      error_msg: null,
-     delete_btn: false
+     delete_btn: false,
     }
   }
 
@@ -20,12 +20,25 @@ class Note extends Component {
   });
   }
 
+  handleChange = (e) => {
+    let noteData = { 
+      user_id: e.target.value,
+      note_id: e.target.name
+      }
+      deleteNote(noteData)
+  }
+
   renderBtn = () => {
     console.log()
     const toggleForm = this.state.delete_btn ? "danger" : "";
     if (this.state.delete_btn ) {
       return (
-        <button className={toggleForm, "delete-btn"}>
+        <button 
+        className={toggleForm, "delete-btn"}
+        onClick={this.handleChange}
+        value={this.props.user_id}
+        name={this.props.note_id}
+        >
           delete
         </button>
       );
@@ -45,7 +58,7 @@ class Note extends Component {
     if (this.state.user_likes === false) {
       try {
         const res = await createLike(likeData);
-        if (res.status == 201) {
+        if (res.status === 201) {
           this.setState(state => ({ num_likes: state.num_likes++, user_likes: true }))
         }
       } catch (error) {
@@ -54,7 +67,7 @@ class Note extends Component {
     } else {
       try {
         const res = await deleteLike(likeData);
-        if (res.status == 200) {
+        if (res.status ===200) {
           this.setState(state => ({ num_likes: state.num_likes--, user_likes: false }))
         }
       } catch (error) {
@@ -82,6 +95,7 @@ class Note extends Component {
               className="like-button btn btn-default"
               value={this.props.user_id}
               name={this.props.note_id}
+              alt="corkboard"
               />
               {this.state.user_likes ? `XXXXX` : ``}
               {/* replace XXXXX with real user feedback */}
