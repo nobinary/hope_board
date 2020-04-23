@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 import "../Style/Register.scss";
 import { signUp, signInUser } from '../Services/ApiMethods'
 import MenuContainer from '../Components/MenuContainer'
@@ -50,6 +51,7 @@ class Register extends Component {
           errorMsg: error
         });
       });
+    this.props.history.push('/');
   };
 
   renderError = () => {
@@ -143,4 +145,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);
