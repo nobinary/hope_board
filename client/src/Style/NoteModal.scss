@@ -1,0 +1,72 @@
+$primary-blue: rgb(0, 255, 225);
+$primary-magenta: rgb(255, 0, 179);
+
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    padding: 2em;
+    min-width: 40em;
+    min-height: 40em;
+    max-width: 70%;
+    color: white;
+    background-color: $primary-blue;
+    transform: translate(-50%, -50%);
+    outline: transparent;
+    box-shadow: 1px 1px 40px black;
+  }
+  .Overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+  }
+
+  .create-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input {
+    min-width: 35em;
+    max-width: 70%;
+    min-height: 30em;
+    max-height: 40%;
+    margin-top: 20px;
+    background-color: $primary-blue;
+    border: none;
+    outline: none;
+    // border-bottom: 1px solid white;
+    // border: 1px solid black;
+  }
+
+  .input::placeholder {
+    color: black;
+  }
+
+  #post-button {
+    background-color: $primary-magenta;
+    margin-top: 20px;
+    margin-left: 8px;
+    border-radius: 0;
+    color: white;
+    min-width: 7em;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px black;
+  }
+
+  #close-button {
+    min-width: 2.5em;
+    min-height: 2.5em;
+    display: flex;
+    margin-top: 10px;
+    bottom: 0;
+    cursor: pointer;
+    margin-left: 93%;
+  }
+
+
+
