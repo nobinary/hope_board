@@ -51,8 +51,18 @@ class Note extends Component {
   // }
     
     render() {
+      let notePosition;
+      if (this.props.top) {
+        notePosition = {
+          position: 'absolute',
+          top: `${this.props.top}px`,
+          left: `${this.props.left}px`,
+          transform: `rotate(${this.props.rotate}deg)`
+        }
+      }
+
     return (
-      <div id="note_main">
+      <div id="note_main" style={notePosition ? notePosition : null}>
           <div className={ `main_note ${this.props.color}`}>
             <p className="text-content"> {this.props.content}</p>
             <div className="date-from">

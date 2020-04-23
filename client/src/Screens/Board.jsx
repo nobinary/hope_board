@@ -41,6 +41,9 @@ class Board extends React.Component {
             ago_string={item.ago_string}
             history={history}
             activeId={this.props.userId}
+            top={Math.floor(Math.random() * 500)}
+            left={Math.floor(Math.random() * 800)}
+            rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}
           />
         );
       });
