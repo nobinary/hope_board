@@ -1,5 +1,5 @@
 import Api from './ApiConfig'
-import { createApi } from './ApiConfig'
+import { createApi, changeHeader } from './ApiConfig'
 
 export const fetchNotes = async () => {
     try {
@@ -65,7 +65,8 @@ export const signInUser = async credentials => {
   try {
     const resp = await Api.post(`users/login`, credentials)
     await localStorage.setItem('token', resp.data.token)
-    createApi();
+    // createApi();
+    changeHeader();
     return resp.data
   } catch (error) {
     return {error: error}

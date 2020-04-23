@@ -1,12 +1,6 @@
 import Axios from 'axios'
 
-
-// const Api = 'http://localhost:3000'
-
-// export default Api
-
 export const JwtToken = () => localStorage.getItem('token') || null;
-export const TOKEN_KEY = 'sample.key';
 
 const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'http://hope-board-api.herokuapp.com'
 
@@ -20,8 +14,15 @@ export const createApi = () => {
     'Access-Control-Allow-Origin': '*'
     }
   })
+  // console.log(Api.defaults.headers)
 }
 createApi();
+
+export const changeHeader = () => {
+  // console.log(JwtToken());
+  Api.defaults.headers['Authorization'] = `Bearer ${JwtToken()}`;
+  // console.log(Api.defaults.headers)
+}
 
 export default Api
 
