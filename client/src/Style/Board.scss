@@ -1,36 +1,28 @@
-.myboard_main {
-    display: flex;
+
+#fp_main {
     position: relative;
-}
 
-.board_menu {
-    position: absolute;
-    cursor: pointer;
-    top: 2%;
-    left: 1%;
-}
 
-.myboard {
-    display: flex;
-    position: absolute;
-    margin-top: 20px;
-
-    .my-board-header {
-        color: white;
-        font-size: 30px;
-        font-weight: 700;
-        margin-left: 31px;
+    #background {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        display: flex;
     }
+
+    .board-menu {
+        position: absolute;
+        top: 2%;
+        left: 1%;
+    }
+
+
 }
 
-.mylists {
-    // border: 1px purple solid;
-    width: 40vw;
-    margin-left: 30%;
-}
-
-.mynotes {
+.notes {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 6%;
+    left: 20%;
 }
