@@ -1,34 +1,36 @@
-
-#fp_main {
-    // background-image: url("https://i.imgur.com/V324XgZ.jpg"); 
-    // background-repeat: repeat; 
-    // width: 100vw;
-    // height: 100vh;
-    // position: relative;
-    // border: red 5px solid;
-
-    #background {
-         border: red 5px solid;
-        max-width: 100vh;
-        max-height: 100vh;
-        position: relative;
-        display: flex;
-    }
-
-    .board-menu {
-        position: absolute;
-        top: 2%;
-        left: 1%;
-    }
-
-
+.myboard_main {
+    display: flex;
+    position: relative;
 }
 
-.notes {
-    border: 5px purple solid;
-    display: flex;
-    flex-wrap: wrap;
+.board_menu {
     position: absolute;
-    top: 6%;
-    left: 20%;
+    cursor: pointer;
+    top: 2%;
+    left: 1%;
+}
+
+.myboard {
+    display: flex;
+    position: absolute;
+    margin-top: 20px;
+
+    .my-board-header {
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        margin-left: 31px;
+    }
+}
+
+.mylists {
+    // border: 1px purple solid;
+    width: 40vw;
+    margin-left: 30%;
+}
+
+.mynotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
