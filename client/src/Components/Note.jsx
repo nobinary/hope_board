@@ -8,13 +8,32 @@ class Note extends Component {
     this.state = { 
      user_likes: false,
      num_likes: '',
-     error_msg: null
+     error_msg: null,
+     delete_btn: false
     }
   }
 
   componentDidMount = () => {
-    this.setState({num_likes: this.props.num_likes});
+    this.setState({
+    num_likes: this.props.num_likes,
+    delete_btn: this.props.delete_btn
+  });
   }
+
+  renderBtn = () => {
+    console.log()
+    const toggleForm = this.state.delete_btn ? "danger" : "";
+    if (this.state.delete_btn ) {
+      return (
+        <button className={toggleForm, "delete-btn"}>
+          delete
+        </button>
+      );
+    } else {
+      return null
+    }
+  };
+
 
   clickLike = async (e) => {
     let likeData = { 
@@ -32,11 +51,6 @@ class Note extends Component {
     }
   }
 
-////ISSUE: setting state is delayed 
-  // sendLike = () => {
-  //     console.log(this.State)
-  //     createLike(this.state)
-  // }
     
     render() {
     return (
@@ -49,6 +63,7 @@ class Note extends Component {
             </div>
             <div className="like_box">
               <p className="like_content">Likes: {this.state.num_likes}</p>
+             {this.renderBtn()}
               <img
               src="https://i.imgur.com/Dh7Znb8.png"
               onClick={this.clickLike}
@@ -66,3 +81,6 @@ class Note extends Component {
 }
   
   export default Note;
+
+
+
