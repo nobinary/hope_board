@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../Style/Register.scss";
 import { signUp, signInUser } from '../Services/ApiMethods'
 import MenuContainer from '../Components/MenuContainer'
-import BigPostIt from "../Shared Components/BigPostIt";
 
 class Register extends Component {
   constructor() {
@@ -39,6 +38,7 @@ class Register extends Component {
 
     signUp(userData)
       .then(() => signInUser(this.state))
+      .then(() => this.props.setUser())
       .catch(error => {
         console.error(error);
         this.setState({
