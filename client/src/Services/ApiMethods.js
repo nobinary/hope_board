@@ -12,10 +12,6 @@ export const fetchNotes = async () => {
 
   export const postNote = async (note) => {
     console.log(note)
-    // const noteData = {
-    //     user_id: note[0].user_id,
-    //     content: note[0].content,
-    // }  
 	try {
 		const resp = await Api.post(`/notes`, note)
 		return resp
@@ -23,6 +19,16 @@ export const fetchNotes = async () => {
 		throw error
     }
 }   
+
+export const deleteNote = async (note) => {
+  console.log(note)
+try {
+  const resp = await Api.delete(`/notes`, note)
+  return resp
+} catch (error) {
+  throw error
+  }
+}  
 
   export const fetchMyLists = async (userID) => {
     try {
@@ -34,11 +40,6 @@ export const fetchNotes = async () => {
   }
 
   export const createLike = async (data) => {
-    // console.log(data)
-    // const likeData = {
-    //     user_id: data[0].user_id,
-    //     note_id: data[0].note_id,
-    // }  
 	try {
 		const resp = await Api.post(`/likes`, data)
 		return resp
