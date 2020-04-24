@@ -16,7 +16,7 @@ class Note extends Component {
   componentDidMount = () => {
     this.setState({
       num_likes: this.props.num_likes,
-      user_liked: this.props.user_liked 
+      user_liked: this.props.user_liked, 
       delete_btn: this.props.delete_btn
     });
   }
