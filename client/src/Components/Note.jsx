@@ -6,18 +6,19 @@ class Note extends Component {
   constructor(props) {
     super(props)
     this.state = { 
-     user_likes: false,
-     num_likes: '',
+     user_liked: null,
+     num_likes: 0,
      error_msg: null,
-     delete_btn: false,
+     delete_btn: false
     }
   }
 
   componentDidMount = () => {
     this.setState({
-    num_likes: this.props.num_likes,
-    delete_btn: this.props.delete_btn
-  });
+      num_likes: this.props.num_likes,
+      user_liked: this.props.user_liked 
+      delete_btn: this.props.delete_btn
+    });
   }
 
   handleChange = (e) => {
@@ -55,11 +56,11 @@ class Note extends Component {
     }
     // console.log(likeData)
 
-    if (this.state.user_likes === false) {
+    if (this.state.user_liked === false) {
       try {
         const res = await createLike(likeData);
         if (res.status === 201) {
-          this.setState(state => ({ num_likes: state.num_likes++, user_likes: true }))
+          this.setState(state => ({ num_likes: state.num_likes++, user_liked: true }))
         }
       } catch (error) {
         this.setState({error_msg: error})
@@ -67,8 +68,8 @@ class Note extends Component {
     } else {
       try {
         const res = await deleteLike(likeData);
-        if (res.status ===200) {
-          this.setState(state => ({ num_likes: state.num_likes--, user_likes: false }))
+        if (res.status === 200) {
+          this.setState(state => ({ num_likes: state.num_likes--, user_liked: false }))
         }
       } catch (error) {
         this.setState({error_msg: error})
@@ -97,7 +98,7 @@ class Note extends Component {
               name={this.props.note_id}
               alt="corkboard"
               />
-              {this.state.user_likes ? `XXXXX` : ``}
+              {this.state.user_liked ? `XXXXX` : ``}
               {/* replace XXXXX with real user feedback */}
             </div>
           </div>
