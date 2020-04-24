@@ -41,6 +41,7 @@ class Board extends React.Component {
             ago_string={item.ago_string}
             history={history}
             activeId={this.props.userId}
+            user_liked={item.user_liked} // rename this? activeUserLiked, maybe?
           />
         );
       });
