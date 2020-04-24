@@ -40,6 +40,7 @@ componentDidMount() {
             num_likes={item.num_likes}
             created_at={item.created_at}
             history={history}
+            delete_btn="true"
           />
         );
       });
@@ -59,6 +60,7 @@ componentDidMount() {
             num_likes={item.num_likes}
             created_at={item.created_at}
             history={history}
+            delete_btn="true"
           />
         );
       });

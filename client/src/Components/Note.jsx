@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {createLike, deleteLike } from '../Services/ApiMethods'
+import {createLike, deleteLike, deleteNote } from '../Services/ApiMethods'
 import '../Style/Note.scss'
 
 class Note extends Component {
@@ -8,13 +8,45 @@ class Note extends Component {
     this.state = { 
      user_likes: false,
      num_likes: '',
-     error_msg: null
+     error_msg: null,
+     delete_btn: false,
     }
   }
 
   componentDidMount = () => {
-    this.setState({num_likes: this.props.num_likes});
+    this.setState({
+    num_likes: this.props.num_likes,
+    delete_btn: this.props.delete_btn
+  });
   }
+
+  handleChange = (e) => {
+    let noteData = { 
+      user_id: e.target.value,
+      note_id: e.target.name
+      }
+      deleteNote(noteData)
+  }
+
+  renderBtn = () => {
+    console.log()
+    const toggleForm = this.state.delete_btn ? "danger" : "";
+    if (this.state.delete_btn ) {
+      return (
+        <button 
+        className={toggleForm, "delete-btn"}
+        onClick={this.handleChange}
+        value={this.props.user_id}
+        name={this.props.note_id}
+        >
+          delete
+        </button>
+      );
+    } else {
+      return null
+    }
+  };
+
 
   clickLike = async (e) => {
     let likeData = { 
@@ -26,7 +58,7 @@ class Note extends Component {
     if (this.state.user_likes === false) {
       try {
         const res = await createLike(likeData);
-        if (res.status == 201) {
+        if (res.status === 201) {
           this.setState(state => ({ num_likes: state.num_likes++, user_likes: true }))
         }
       } catch (error) {
@@ -35,7 +67,7 @@ class Note extends Component {
     } else {
       try {
         const res = await deleteLike(likeData);
-        if (res.status == 200) {
+        if (res.status ===200) {
           this.setState(state => ({ num_likes: state.num_likes--, user_likes: false }))
         }
       } catch (error) {
@@ -44,11 +76,6 @@ class Note extends Component {
     }
   }
 
-////ISSUE: setting state is delayed 
-  // sendLike = () => {
-  //     console.log(this.State)
-  //     createLike(this.state)
-  // }
     
     render() {
     return (
@@ -61,12 +88,14 @@ class Note extends Component {
             </div>
             <div className="like_box">
               <p className="like_content">Likes: {this.state.num_likes}</p>
+             {this.renderBtn()}
               <img
               src="https://i.imgur.com/Dh7Znb8.png"
               onClick={this.clickLike}
               className="like-button btn btn-default"
               value={this.props.user_id}
               name={this.props.note_id}
+              alt="corkboard"
               />
               {this.state.user_likes ? `XXXXX` : ``}
               {/* replace XXXXX with real user feedback */}
@@ -78,3 +107,6 @@ class Note extends Component {
 }
   
   export default Note;
+
+
+
