@@ -16,7 +16,8 @@ $main-fonts: white;
     }
 
     #background {
-        max-width: 100%;
+        min-width: 100vw;
+        max-height: 100vh;
         position: relative;
         display: flex;
     }

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactModal from 'react-modal'
+import "../Style/AboutModal.scss"
 
 
 class AboutModal extends React.Component {
@@ -27,10 +28,11 @@ class AboutModal extends React.Component {
             <div>
                 <img
                 onClick={this.handleOpenModal}
-                src="https://i.imgur.com/JgBnwAE.png" 
+                // src="https://i.imgur.com/JgBnwAE.png" 
+                src="https://i.imgur.com/I2oqk60.png"
                 id="about-icon" 
                 className="img-responsive"
-                alt="white info icon that directs you to how website works"
+                alt="black info icon that directs you to how website works"
                 />
                 <ReactModal 
                     isOpen={this.state.showModal} 
