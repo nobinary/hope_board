@@ -28,12 +28,12 @@ $main-fonts: black;
     }
 
     #yellow-note {
-        height: 600px;
-        width: 600px;
+        height: 550px;
+        width: 550px;
         background-color: $primary-yellow;
         position: absolute;
         transform: rotate(-10deg);
-        top: 18%;
+        top: 15%;
         left: 40%;
         box-shadow: 10px 10px 50px #1C1C1C;
     }
@@ -42,10 +42,10 @@ $main-fonts: black;
 .login-form {
     position: absolute;
     background-color: $primary-blue;
-    top: 12%;
+    top: 8%;
     left: 30%;
-    height: 600px;
-    width: 600px;
+    height: 550px;
+    width: 550px;
     box-shadow: 10px 20px 50px #373737;
     color: $main-fonts;
 
