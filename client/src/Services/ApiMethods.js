@@ -23,7 +23,7 @@ export const fetchNotes = async () => {
 export const deleteNote = async (note) => {
   console.log(note)
 try {
-  const resp = await Api.delete(`/notes`, note)
+  const resp = await Api.delete(`/notes/${note.note_id}`)
   return resp
 } catch (error) {
   throw error
