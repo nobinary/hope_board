@@ -7,14 +7,14 @@ $primary-magenta: rgb(255, 0, 179);
     left: 50%;
     display: block;
     padding: 2em;
-    min-width: 40em;
-    min-height: 40em;
-    max-width: 70%;
+    min-width: 36em;
+    min-height: 36em;
+    max-width: 60%;
     color: white;
     background-color: $primary-blue;
     transform: translate(-50%, -50%);
     outline: transparent;
-    box-shadow: 1px 1px 40px black;
+    box-shadow: 0px 10px 50px black;
   }
   .Overlay {
     position: fixed;
@@ -27,45 +27,54 @@ $primary-magenta: rgb(255, 0, 179);
 
   .create-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
   .input {
     min-width: 35em;
-    max-width: 70%;
-    min-height: 30em;
-    max-height: 40%;
-    margin-top: 20px;
+    max-width: 20%;
+    min-height: 28em;
+    max-height: 35%;
+    margin-top: 30px;
     background-color: $primary-blue;
     border: none;
     outline: none;
-    // border-bottom: 1px solid white;
-    // border: 1px solid black;
+    margin-left: 25px;
+    resize: none;
   }
 
   .input::placeholder {
     color: black;
+    opacity: 70%;
   }
 
-  #post-button {
+
+  .button-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  #submit {
     background-color: $primary-magenta;
     margin-top: 20px;
-    margin-left: 8px;
     border-radius: 0;
     color: white;
     min-width: 7em;
+    width: 15vw;
     font-size: 20px;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 2px #1C1C1C;
   }
 
+
+
   #close-button {
-    min-width: 2.5em;
-    min-height: 2.5em;
+    width: 45px;
     display: flex;
-    margin-top: 10px;
     bottom: 0;
     cursor: pointer;
-    margin-left: 93%;
+    margin-left: 92%;
   }
 
 

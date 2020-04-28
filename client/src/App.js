@@ -4,7 +4,7 @@ import Board from './Screens/Board'
 import MyBoard from './Screens/MyBoard'
 import Login from './Screens/Login'
 import Register from './Screens/Register' 
-import CreateNote from './Components/CreateNote'
+// import CreateNote from './Components/CreateNote'
 import About from './Components/About'
 import {Switch, Route} from 'react-router-dom'
 import userData from './Services/Auth';
@@ -45,9 +45,9 @@ class App extends React.Component {
             <Route path="/about">
               <About/>
             </Route>
-            <Route path="/createnote">
+            {/* <Route path="/createnote">
               <CreateNote/>
-            </Route>
+            </Route> */}
             <Route path="/register">
               <Register setUser={this.setUser} />
             </Route>
