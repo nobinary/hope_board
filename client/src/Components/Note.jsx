@@ -87,7 +87,9 @@ class Note extends Component {
               <p className="author-text"> {this.props.user_name}</p>
               <p className="date-content">{this.props.ago_string}</p>
             </div>
-            <div className="like_box">
+
+            
+            {/* <div className="like_box"> //ADD TO BIG POST IT MODAL
               <p className="like_content">Likes: {this.state.num_likes}</p>
              {this.renderBtn()}
               <img
@@ -98,9 +100,9 @@ class Note extends Component {
               name={this.props.note_id}
               alt="corkboard"
               />
-              {this.state.user_liked ? `XXXXX` : ``}
+              {this.state.user_liked ? `XXXXX` : ``} */}
               {/* replace XXXXX with real user feedback */}
-            </div>
+            {/* </div> */}
           </div>
       </div>
     );
