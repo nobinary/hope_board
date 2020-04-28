@@ -7,29 +7,32 @@ $primary-green: #28D701;
 
 #note_main {
      display: flex;
+     cursor: pointer;
 
      .main_note {
-          padding: 25px;
+          padding: 25px 25px 10px 20px;
           margin-right: 20px;
           margin-left: 20px;
           margin-bottom: 20px;
           width: 200px;
           height: 200px;
           font-size: 10px;
-          box-shadow: 10px 10px 50px #1C1C1C;
+          // box-shadow: 0 0 10px 1px #1C1C1C;
+          box-shadow: 6px 6px 10px -6px #1C1C1C;
+
+
       }
 
       .date-from {
-           display: inline-flex;
-           text-align: right;
+           display: flex;
            flex-direction: row;
-           margin-top: 50px;
+           position: absolute;
+           bottom: 25px;
       }
 
       .author-text {
            display: inline;
            text-align: left;
-           margin-right: 10px;
       }
 
       .text-content {
@@ -37,9 +40,9 @@ $primary-green: #28D701;
            line-height: 20px;
       }
 
-     //  .date-content {
-     //      margin-left: 50px;
-     //  }
+      .date-content { 
+           margin-left: 25px;
+      }
 }
 
 

@@ -82,10 +82,16 @@ class Note extends Component {
     return (
       <div id="note_main">
           <div className={ `main_note ${this.props.color}`}>
-            <p className="text-content"> {this.props.content}</p>
+            <div className="text-content">
+            <p>{this.props.content}</p>
+            </div>
             <div className="date-from">
-              <p className="author-text"> {this.props.user_name}</p>
-              <p className="date-content">{this.props.ago_string}</p>
+              <div className="author-text">
+              <p>{this.props.user_name}</p>
+              </div>
+              <div className="date-content">
+              <p>{this.props.ago_string}</p>
+              </div>
             </div>
 
             
