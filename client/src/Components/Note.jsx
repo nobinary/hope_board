@@ -99,7 +99,7 @@ class Note extends Component {
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal"
           className={`main_note ${this.props.color}`}
-          className="Modal"
+          id="Modal"
           overlayClassName="Overlay"
           ariaHideApp={false}
           onRequestClose={this.handleCloseModal}
