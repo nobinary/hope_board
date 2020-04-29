@@ -75,7 +75,7 @@ class NoteModal extends React.Component {
           onRequestClose={this.handleCloseModal}
         >
           <img
-            src="https://i.imgur.com/OgwveVc.png"
+            src="https://i.imgur.com/gLF12xc.png"
             onClick={this.handleCloseModal}
             className="btn btn-default"
             id="close-button"
