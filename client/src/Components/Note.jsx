@@ -11,7 +11,8 @@ class Note extends Component {
       num_likes: 0,
       error_msg: null,
       delete_btn: false,
-      showModal: false
+      showModal: false,
+      userId: null
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -23,7 +24,8 @@ class Note extends Component {
     this.setState({
       num_likes: this.props.num_likes,
       user_liked: this.props.user_liked,
-      delete_btn: this.props.delete_btn
+      delete_btn: this.props.delete_btn,
+      userId: this.props.userId
     });
   }
   
@@ -39,12 +41,12 @@ class Note extends Component {
   renderBtn = () => {
     console.log()
     const toggleForm = this.state.delete_btn ? "danger" : "";
-    if (this.state.delete_btn) {
+    if (this.state.delete_btn === "true") {
       return (
         <button
           className={toggleForm, "delete-btn"}
           onClick={this.handleChange}
-          value={this.props.user_id}
+          value={this.props.userId}
           name={this.props.note_id}
         >
           delete
@@ -58,10 +60,10 @@ class Note extends Component {
 
   clickLike = async (e) => {
     let likeData = {
-      user_id: this.props.activeId,
+      user_id: this.props.userId,
       note_id: e.target.name
     }
-    // console.log(likeData)
+    console.log(likeData)
 
     if (this.state.user_liked === false) {
       try {
@@ -103,8 +105,12 @@ class Note extends Component {
           overlayClassName="Overlay"
           ariaHideApp={false}
           onRequestClose={this.handleCloseModal}
+          setUser={this.setUser} 
         >
            <div>
+           {/* {console.log(
+             "state" + this.state.delete_btn
+           )} */}
           <div
             className="text-content">
             <p>{this.props.content}</p>
@@ -127,7 +133,7 @@ class Note extends Component {
               src="https://i.imgur.com/Dh7Znb8.png"
               onClick={this.clickLike}
               className="like-button btn btn-default"
-              value={this.props.user_id}
+              value={this.props.userId}
               name={this.props.note_id}
               alt="corkboard"
             />

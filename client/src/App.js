@@ -55,7 +55,7 @@ class App extends React.Component {
               <Login setUser={this.setUser} />
             </Route>
             <Route path="/myboard">
-              <MyBoard/>
+              <MyBoard userId={this.state.userId} />
             </Route>
             <Route path="/">
               <Board userId={this.state.userId} />

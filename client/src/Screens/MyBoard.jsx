@@ -10,7 +10,8 @@ class MyBoard extends React.Component {
     super(props);
     this.state = {
       myNotes: [],
-      myFavorites: []
+      myFavorites: [],
+      userId: null
     };
   }
 
@@ -35,6 +36,7 @@ componentDidMount() {
           <Note
             note_id={item.id}
             user_id={item.user_id}
+            userId={this.props.userId} 
             content={item.content}
             color={item.color}
             num_likes={item.num_likes}
@@ -55,12 +57,14 @@ componentDidMount() {
           <Note
             note_id={item.id}
             user_id={item.user_id}
+            userId={this.props.userId} 
+            setUser={this.setUser} 
             content={item.content}
             color={item.color}
             num_likes={item.num_likes}
             created_at={item.created_at}
             history={history}
-            delete_btn="true"
+            delete_btn="false"
           />
         );
       });
