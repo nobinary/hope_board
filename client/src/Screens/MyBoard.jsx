@@ -16,7 +16,7 @@ class MyBoard extends React.Component {
   }
 
 componentDidMount() {
-   const notes = fetchMyLists(1); //HARDCODED USER
+   const notes = fetchMyLists(this.props.userId); //HARDCODED USER
    const self = this
   notes.then(function(data) { 
   console.log(data.data)
