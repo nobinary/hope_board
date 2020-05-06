@@ -5,10 +5,10 @@ import NoteModal from '../Components/NoteModal'
 import AboutModal from '../Components/AboutModal'
 import {Link} from 'react-router-dom'
 
-function Footer() {
+function Footer(props) {
     return (
       <div id="footer_main">
-          <NoteModal />
+          <NoteModal userId={props.userId} />
           <AboutModal />
           {/* <img 
           src="https://i.imgur.com/JgBnwAE.png" 

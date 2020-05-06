@@ -11,29 +11,30 @@ class MyBoard extends React.Component {
     this.state = {
       myNotes: [],
       myFavorites: [],
-      userId: null
+      userId: this.props.userId
     };
   }
 
-componentDidMount() {
-   const notes = fetchMyLists(1); //HARDCODED USER
-   const self = this
-  notes.then(function(data) { 
-  console.log(data.data)
-  self.setState(state => ({
-        myNotes: data.data.notes,
-        myFavorites: data.data.favorites
-      }));
-      // console.log(self.state.myNotes)
-    });
+  componentDidMount = async () => {
+    this.getMyBoard();
+  }
+
+  getMyBoard = async () => {
+    const myBoard = await fetchMyLists(this.state.userId); 
+    console.log(myBoard);
+    this.setState(state => ({
+      myNotes: myBoard.data.notes,
+      myFavorites: myBoard.data.favorites
+    }));
   }
 
   renderMyNotes = () => {
     const { history } = this.props;
     if (this.state.myNotes && this.state.myNotes.length > 0) {
-      return this.state.myNotes.map(item => {
+      return this.state.myNotes.map((item, index) => {
         return (
           <Note
+            key={index}
             note_id={item.id}
             user_id={item.user_id}
             userId={this.props.userId} 
@@ -52,9 +53,10 @@ componentDidMount() {
   renderMyFavorites= () => {
     const { history } = this.props;
     if (this.state.myFavorites && this.state.myFavorites.length > 0) {
-      return this.state.myFavorites.map(item => {
+      return this.state.myFavorites.map((item, index) => {
         return (
           <Note
+            key={index}
             note_id={item.id}
             user_id={item.user_id}
             userId={this.props.userId} 
@@ -64,6 +66,8 @@ componentDidMount() {
             num_likes={item.num_likes}
             created_at={item.created_at}
             history={history}
+            user_liked={true}
+            refresh={this.getMyBoard}
             delete_btn="false"
           />
         );
@@ -100,7 +104,7 @@ componentDidMount() {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer userId={this.props.userId} />
       </>
     );
   }

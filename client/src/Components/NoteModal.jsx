@@ -5,12 +5,12 @@ import { postNote } from '../Services/ApiMethods'
 import '../Style/NoteModal.scss'
 
 class NoteModal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showModal: false,
-      user_id: 0,
+      user_id: this.props.userId,
       content: "",
     };
 
