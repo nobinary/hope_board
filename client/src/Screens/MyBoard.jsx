@@ -15,6 +15,7 @@ class MyBoard extends React.Component {
     };
   }
 
+
   componentDidMount = async () => {
     this.getMyBoard();
   }
