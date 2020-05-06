@@ -67,7 +67,7 @@ class Board extends React.Component {
             {this.renderNotes()}
             </div>
         </div>
-        <Footer />
+        <Footer userId={this.props.userId} />
       </div>
     );
   }

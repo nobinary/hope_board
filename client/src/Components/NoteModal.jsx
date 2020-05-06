@@ -28,6 +28,8 @@ class NoteModal extends React.Component {
     this.setState({ showModal: false });
   }
 
+  
+
   //CreateNote Function
 
   handleChange = event =>
@@ -35,15 +37,23 @@ class NoteModal extends React.Component {
       [event.target.name]: event.target.value,
     });
 
-  onNoteSubmit = event => {
-    event.preventDefault();
-    const { user_id, content } = this.state;
-    const noteData = {
-      note: {
-        user_id: user_id,
-        content: content
-      }
-    };
+    assignColor = () => {
+      let number = Math.floor(Math.random() *5)
+      let colorArray = ["blue", "green", "pink", "yellow", "orange"]
+      return colorArray[number]
+    }  
+  
+    onNoteSubmit = event => {
+      event.preventDefault();
+      const { user_id, content } = this.state;
+      console.log(user_id)
+      const noteData = {
+        note: {
+          user_id: this.props.userId,
+          content: content,
+          color: this.assignColor()
+        }
+      };
 
     postNote(noteData)
       .catch(error => {
