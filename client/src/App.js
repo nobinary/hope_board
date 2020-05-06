@@ -6,13 +6,13 @@ import Login from './Screens/Login'
 import Register from './Screens/Register' 
 // import CreateNote from './Components/CreateNote'
 import About from './Components/About'
-import {Switch, Route, useHistory} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import userData from './Services/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss';
 
 class App extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +23,6 @@ class App extends React.Component {
   componentDidMount = async () => {
     this.setUser();
   }
-
-   
 
   setUser = async () => {
 
@@ -47,6 +45,9 @@ class App extends React.Component {
             <Route path="/about">
               <About/>
             </Route>
+            {/* <Route path="/createnote">
+              <CreateNote/>
+            </Route> */}
             <Route path="/register">
               <Register setUser={this.setUser} />
             </Route>
