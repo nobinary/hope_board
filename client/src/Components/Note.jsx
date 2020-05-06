@@ -63,7 +63,6 @@ class Note extends Component {
       user_id: this.props.userId,
       note_id: e.target.name
     }
-    console.log(likeData)
 
     if (this.state.user_liked === false) {
       try {
@@ -83,6 +82,11 @@ class Note extends Component {
       } catch (error) {
         this.setState({ error_msg: error })
       }
+    }
+
+    if (this.props.refresh) {
+      this.handleCloseModal();
+      this.props.refresh();
     }
   }
 
