@@ -74,12 +74,14 @@ class NoteModal extends React.Component {
           ariaHideApp={false}
           onRequestClose={this.handleCloseModal}
         >
-          <img
-            src="https://i.imgur.com/gLF12xc.png"
+          <div className="button-contain">
+          <button
             onClick={this.handleCloseModal}
             className="btn btn-default"
             id="close-button"
-          />
+            >X</button>
+            </div>
+          
           <form className="create-form" onSubmit={this.onNoteSubmit}>
             <textarea
               type="text"
@@ -90,7 +92,7 @@ class NoteModal extends React.Component {
               className="input"
               required
             ></textarea>
-            <div className="button-cont">
+            <div className="post-cont">
 
             <button
               type="submit"

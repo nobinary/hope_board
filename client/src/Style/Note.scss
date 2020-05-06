@@ -98,7 +98,8 @@ $primary-green: #28D701;
      position: absolute;
     top: 50%;
     left: 50%;
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 2em;
     min-width: 36em;
     min-height: 36em;
@@ -110,7 +111,20 @@ $primary-green: #28D701;
 
 #close-button-2 {
      background-color: transparent;
-     border: 1px solid black;
-     border-radius: none;
+     font-size: 30px;
+     display: flex;
+     flex-direction: row-reverse;
+}
+
+.cont-big-note {
+     margin-top: 10px;
+     height: 34vh;
+     display: flex;
+}
+
+.date-from-big {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
 }
 
