@@ -38,7 +38,7 @@ $primary-magenta: rgb(255, 0, 179);
   .input {
     min-width: 35em;
     max-width: 20%;
-    min-height: 28em;
+    min-height: 27em;
     max-height: 35%;
     margin-top: 30px;
     background-color: $primary-blue;
@@ -54,10 +54,16 @@ $primary-magenta: rgb(255, 0, 179);
   }
 
 
-  .button-cont {
+  .button-contain {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+
+  .post-cont {
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   #submit {
@@ -75,10 +81,10 @@ $primary-magenta: rgb(255, 0, 179);
 
 
   #close-button {
-    width: 50px;
+    font-size: 30px;
     display: flex;
     cursor: pointer;
-    margin-left: 90%;
+
   }
 
 

@@ -107,16 +107,21 @@ class Note extends Component {
           onRequestClose={this.handleCloseModal}
           setUser={this.setUser} 
         >
-           <div>
+           {/* <div> */}
            {/* {console.log(
              "state" + this.state.delete_btn
            )} */}
+           <button
+            onClick={this.handleCloseModal}
+            id="close-button-2"
+            className="btn btn-default"
+            >X</button>
           <div
-            className="text-content">
+            className="cont-big-note">
             <p>{this.props.content}</p>
           </div>
           <div
-            className="date-from">
+            className="date-from-big">
             <div
               className="author-text">
               <p>{this.props.user_name}</p>
@@ -140,12 +145,8 @@ class Note extends Component {
             {this.state.user_liked ? `XXXXX` : ``}
             {/* replace XXXXX with real user feedback */}
           </div>
-        </div>
-          <button
-            onClick={this.handleCloseModal}
-            id="close-button-2"
-            className="btn btn-default"
-            >Close</button>
+        {/* </div> */}
+          
         </ReactModal>
         <div
           className={`main_note ${this.props.color}`}
