@@ -87,7 +87,7 @@ class MyBoard extends React.Component {
         alt="brown corkboard background" 
         />
           <div className="board_menu">
-            <MenuContainer />
+            <MenuContainer userId={this.props.userId} />
           </div>
           <div className="myboard">
             <div className="mylists">

@@ -60,7 +60,7 @@ class Board extends React.Component {
         src="https://i.imgur.com/V324XgZ.jpg" 
         alt="brown corkboard background" />
           <div className="board-menu">
-            <MenuContainer />
+            <MenuContainer userId={this.props.userId} />
           </div>
           <div className="board-box">
             <div className="notes">

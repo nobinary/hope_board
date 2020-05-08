@@ -39,6 +39,9 @@ class App extends React.Component {
   }
 
   render () {
+    
+    const myBoard = this.state.userId ? (<MyBoard userId={this.state.userId} />) : (<Login setUser={this.setUser} />)
+
     return (
       <div className="App">
         <Switch>
@@ -55,7 +58,7 @@ class App extends React.Component {
               <Login setUser={this.setUser} />
             </Route>
             <Route path="/myboard">
-              <MyBoard userId={this.state.userId} />
+              {myBoard}
             </Route>
             <Route path="/">
               <Board userId={this.state.userId} />

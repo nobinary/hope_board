@@ -11,23 +11,36 @@ export default class Menu extends Component {
     if(this.props.menuVisibility) {
       visibility = "show";
     }
+
+    const myBoard = this.props.userId ?
+      (<h2>
+        <Link className="link" to="/myboard">
+          My Board
+        </Link>
+      </h2>) :
+      null;
+
     return (
       <div className="menu-nav">
       <div id="flyoutMenu"
-      onMouseUp={this.props.handleMouseDown}
-      className={visibility}>
+        onMouseUp={this.props.handleMouseDown}
+        className={visibility}>
         <h2>
-          <Link 
-            className="link" to="/">Home</Link></h2>
-            <h2>
-            <Link 
-          className="link" to="/login">Login</Link></h2>
-          <h2>
-          <Link 
-        className="link" to="/register">Register</Link></h2>
+          <Link className="link" to="/">
+              Home
+          </Link>
+        </h2>
         <h2>
-          <Link 
-        className="link" to="/myboard">My Board</Link></h2>
+          <Link className="link" to="/login">
+            Login
+          </Link>
+        </h2>
+        <h2>
+          <Link className="link" to="/register">
+            Register
+          </Link>
+        </h2>
+        {myBoard}
       </div>
       </div>
     )

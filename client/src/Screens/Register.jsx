@@ -79,7 +79,7 @@ class Register extends Component {
           alt="brown corkboard background"
         />
         <div className="nav-link">
-          <MenuContainer />
+          <MenuContainer userId={this.props.userId} />
         </div>
         <div id="blue-note"></div>
         <main className="register-form">
