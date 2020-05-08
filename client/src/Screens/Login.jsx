@@ -78,7 +78,7 @@ class Login extends Component {
         type="login"
       /> */}
       <div className="nav-bar">
-      <MenuContainer />
+      <MenuContainer userId={this.props.userId} />
       </div>
         <div id="yellow-note"></div>
         <main className="login-form">
