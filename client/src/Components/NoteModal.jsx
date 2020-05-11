@@ -55,11 +55,16 @@ class NoteModal extends React.Component {
         }
       };
 
-    postNote(noteData)
-      .catch(error => {
-        console.error(error);
-      });
-  };
+      postNote(noteData)
+        .then(data => {
+          console.log(data);
+          this.handleCloseModal();
+          this.props.refresh();
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    };
 
 
 

@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 function Footer(props) {
     return (
       <div id="footer_main">
-          <NoteModal userId={props.userId} />
+          <NoteModal userId={props.userId} refresh={props.refresh} />
           <AboutModal />
           {/* <img 
           src="https://i.imgur.com/JgBnwAE.png" 
