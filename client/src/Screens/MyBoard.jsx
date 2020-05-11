@@ -43,6 +43,7 @@ class MyBoard extends React.Component {
             num_likes={item.num_likes}
             created_at={item.created_at}
             history={history}
+            refresh={this.getMyBoard}
             delete_btn="true"
           />
         );
@@ -104,7 +105,7 @@ class MyBoard extends React.Component {
             </div>
           </div>
         </div>
-        <Footer userId={this.props.userId} />
+        <Footer userId={this.props.userId} refresh={this.getMyBoard} />
       </>
     );
   }

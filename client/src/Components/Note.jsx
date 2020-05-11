@@ -30,12 +30,14 @@ class Note extends Component {
   }
   
 
-  handleChange = (e) => {
+  deleteClick = async (e) => {
     let noteData = {
       user_id: e.target.value,
       note_id: e.target.name
     }
-    deleteNote(noteData)
+    await deleteNote(noteData);
+    this.handleCloseModal();
+    this.props.refresh();
   }
 
   renderBtn = () => {
@@ -45,7 +47,7 @@ class Note extends Component {
       return (
         <button
           className={toggleForm, "delete-btn"}
-          onClick={this.handleChange}
+          onClick={this.deleteClick}
           value={this.props.userId}
           name={this.props.note_id}
         >

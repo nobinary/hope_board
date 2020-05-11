@@ -14,14 +14,24 @@ class Board extends React.Component {
   }
 
   componentDidMount() {
-   const notes = fetchNotes();
-   console.log(notes)
-   const self = this
-  notes.then(function(data) { 
-  self.setState(state => ({
-        notes: data.data
-      }));
-    });
+    this.getNotesFromApi();
+  }
+
+  getNotesFromApi = async () => {
+  //   const notes = fetchNotes();
+  //   console.log(notes)
+  //   const self = this
+  //  notes.then(function(data) { 
+  //  self.setState(state => ({
+  //        notes: data.data
+  //      }));
+  //    });
+
+     const notes = await fetchNotes(); 
+     console.log(notes);
+     this.setState(state => ({
+       notes: notes.data
+     }));
   }
 
   renderNotes = () => {
@@ -67,7 +77,7 @@ class Board extends React.Component {
             {this.renderNotes()}
             </div>
         </div>
-        <Footer userId={this.props.userId} />
+        <Footer userId={this.props.userId} refresh={this.getNotesFromApi} />
       </div>
     );
   }
