@@ -9,6 +9,7 @@ $primary-green: #28D701;
      display: flex;
      cursor: pointer;
 
+
      .main_note {
           padding: 25px 25px 10px 20px;
           margin-right: 20px;
@@ -18,10 +19,7 @@ $primary-green: #28D701;
           max-width: 210px;
           height: 210px;
           font-size: 10px;
-          // box-shadow: 6px 6px 10px -6px #1C1C1C;
           box-shadow: 0 -6px 0 transparent, 0 4px 10px rgba(0,0,0, .35);
-
-
       }
 
       .date-from {
