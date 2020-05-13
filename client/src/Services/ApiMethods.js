@@ -83,6 +83,16 @@ export const signInUser = async credentials => {
   }
 }
 
+export const logOut = async userId => {
+  try {
+      await localStorage.clear()
+      return true
+  } catch(error) {
+      throw error
+  }
+
+}
+
 
 
 

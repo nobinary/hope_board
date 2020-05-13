@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Logout from '../Screens/Logout'
 import '../Style/Menu.scss'
 
 
@@ -41,6 +42,11 @@ export default class Menu extends Component {
           </Link>
         </h2>
         {myBoard}
+        <h2>
+        <Link className="link" to="/logout">
+          Logout
+        </Link>
+        </h2>
       </div>
       </div>
     )

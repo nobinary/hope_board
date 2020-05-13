@@ -140,16 +140,18 @@ class Note extends Component {
           <div className="like_box">
             <p className="like_content">Likes: {this.state.num_likes}</p>
             {this.renderBtn()}
+            <div className="like-buttons">
             <img
-              src="https://i.imgur.com/Dh7Znb8.png"
+              src="https://i.imgur.com/O92Pzls.png"
               onClick={this.clickLike}
               className="like-button btn btn-default"
               value={this.props.userId}
               name={this.props.note_id}
               alt="corkboard"
             />
-            {this.state.user_liked ? `XXXXX` : ``}
+            {this.state.user_liked ? <img src="https://i.imgur.com/Yv7Nr4B.png" className="liked-heart" /> : ``}
             {/* replace XXXXX with real user feedback */}
+          </div>
           </div>
         {/* </div> */}
           
