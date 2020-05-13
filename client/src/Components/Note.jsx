@@ -126,6 +126,26 @@ class Note extends Component {
             className="cont-big-note">
             <p>{this.props.content}</p>
           </div>
+          <div className="like_box">
+            <p className="like_content">Likes: {this.state.num_likes}</p>
+            {this.renderBtn()}
+            <div className="like-buttons">
+              <div className="unliked-heart-cont">
+            <img
+              src="https://i.imgur.com/O92Pzls.png"
+              onClick={this.clickLike}
+              className="like-button btn-default"
+              value={this.props.userId}
+              name={this.props.note_id}
+              alt="corkboard"
+            />
+            </div>
+            <div className="liked-heart-cont">
+            {this.state.user_liked ? <img src="https://i.imgur.com/Yv7Nr4B.png" className="liked-heart" /> : ``}
+            {/* replace XXXXX with real user feedback */}
+            </div>
+          </div>
+          </div>
           <div
             className="date-from-big">
             <div
@@ -137,24 +157,6 @@ class Note extends Component {
               <p>{this.props.ago_string}</p>
             </div>
           </div>
-          <div className="like_box">
-            <p className="like_content">Likes: {this.state.num_likes}</p>
-            {this.renderBtn()}
-            <div className="like-buttons">
-            <img
-              src="https://i.imgur.com/O92Pzls.png"
-              onClick={this.clickLike}
-              className="like-button btn btn-default"
-              value={this.props.userId}
-              name={this.props.note_id}
-              alt="corkboard"
-            />
-            {this.state.user_liked ? <img src="https://i.imgur.com/Yv7Nr4B.png" className="liked-heart" /> : ``}
-            {/* replace XXXXX with real user feedback */}
-          </div>
-          </div>
-        {/* </div> */}
-          
         </ReactModal>
         <div
           className={`main_note ${this.props.color}`}
