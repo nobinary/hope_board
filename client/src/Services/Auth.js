@@ -12,9 +12,11 @@ const verify = () => {
         return error;
     }
 }
+
 const userData = () => {
     JwtToken = localStorage.getItem('token') || null;
     return verify();
 }
+
 
 export default userData;

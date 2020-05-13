@@ -4,13 +4,13 @@ import Board from './Screens/Board'
 import MyBoard from './Screens/MyBoard'
 import Login from './Screens/Login'
 import Register from './Screens/Register' 
-// import CreateNote from './Components/CreateNote'
+import Logout from './Screens/Logout'
 import About from './Components/About'
 import {Switch, Route} from 'react-router-dom'
 import userData from './Services/Auth';
+import logOut from './Services/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss';
-
 class App extends React.Component {
 
   constructor(props) {
@@ -38,8 +38,12 @@ class App extends React.Component {
     }
   }
 
+  clearUser = () => {
+    this.setState({ userId: null })
+  }
+
+
   render () {
-    
     const myBoard = this.state.userId ? (<MyBoard userId={this.state.userId} />) : (<Login setUser={this.setUser} />)
 
     return (
@@ -48,14 +52,14 @@ class App extends React.Component {
             <Route path="/about">
               <About/>
             </Route>
-            {/* <Route path="/createnote">
-              <CreateNote/>
-            </Route> */}
             <Route path="/register">
               <Register setUser={this.setUser} />
             </Route>
             <Route path="/login">
               <Login setUser={this.setUser} />
+            </Route>
+            <Route path="/logout">
+              <Logout clearUser={this.clearUser} />
             </Route>
             <Route path="/myboard">
               {myBoard}

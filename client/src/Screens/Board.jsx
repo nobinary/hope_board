@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from './Logout';
 import MenuContainer from "../Components/MenuContainer";
 import Note from "../Components/Note";
 import Footer from "../Components/Footer";

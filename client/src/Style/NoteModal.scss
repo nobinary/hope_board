@@ -9,15 +9,15 @@ $primary-magenta: rgb(255, 0, 179);
     position: absolute;
     top: 50%;
     left: 50%;
-    display: block;
+    display: flex;
     padding: 2em;
     min-width: 36em;
     min-height: 36em;
-    max-width: 60%;
+    max-width: 100%;
     // color: black;
-    background-color: $primary-blue;
+    // background-color: $primary-blue;
     transform: translate(-50%, -50%);
-    outline: transparent;
+    // outline: transparent;
     box-shadow: 0px 10px 50px #1C1C1C;
   }
   .Overlay {
@@ -36,8 +36,8 @@ $primary-magenta: rgb(255, 0, 179);
   }
 
   .input {
-    min-width: 35em;
-    max-width: 20%;
+    min-width: 32em;
+    max-width: 100%;
     min-height: 27em;
     max-height: 35%;
     margin-top: 30px;
