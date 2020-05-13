@@ -101,8 +101,20 @@ class Note extends Component {
   }
 
   render() {
+
+    let notePosition;
+    if (this.props.top) {
+      notePosition = {
+        position: 'relative',
+        top: `${this.props.top}px`,
+        left: `${this.props.left}px`,
+        transform: `rotate(${this.props.rotate}deg)`,
+        zIndex: `${this.props.zIndex}`
+      }
+    }
+
     return (
-      <div id="note_main">
+      <div id="note_main" style={notePosition ? notePosition : null}>
         <ReactModal
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal"

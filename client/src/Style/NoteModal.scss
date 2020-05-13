@@ -21,6 +21,7 @@ $primary-magenta: rgb(255, 0, 179);
   }
   .Overlay {
     position: fixed;
+    z-index:99;
     top: 0;
     right: 0;
     bottom: 0;

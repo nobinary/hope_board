@@ -54,7 +54,11 @@ class Board extends React.Component {
             activeId={this.props.userId}
             userId={this.props.userId} 
             user_liked={item.user_liked} // rename this? activeUserLiked, maybe?
-            // setUser={this.setUser} 
+            // setUser={this.setUser}
+            top={Math.floor(Math.random() * 60)-30}
+            left={Math.floor(Math.random() * 60)-30}
+            rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}
+            zIndex={this.state.notes.length - index} 
           />
         );
       });
