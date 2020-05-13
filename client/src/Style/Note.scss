@@ -18,7 +18,6 @@ $primary-green: #28D701;
           max-width: 210px;
           height: 210px;
           font-size: 10px;
-          // box-shadow: 0 0 10px 1px #1C1C1C;
           // box-shadow: 6px 6px 10px -6px #1C1C1C;
           box-shadow: 0 -6px 0 transparent, 0 4px 10px rgba(0,0,0, .35);
 
@@ -69,26 +68,28 @@ $primary-green: #28D701;
     flex-direction: row;
     justify-content: space-between;
 
-    .like-button {
-          // margin-top: 12px;
-          // height: 24px;
-          // width: 24px;
-          right: 7.7%;
-          bottom: 16%;
-          position: relative;
+
+    .like-buttons {
+          display: flex;
+          margin-top: 20px;
+          margin-right: 50px;
      }
 
-     // .like-button:hover {
-     //      height: 4.8vh;
-     //      width: 3.3vw;
-     // }
+    .unliked-heart-cont {
+     display: flex;
+     position: absolute;
+    }
+
+    .liked-heart-cont {
+         display: flex;
+         position: absolute;
+         z-index: 1;
+    }
 
      .liked-heart {
-          height: 24px;
-          width: 24px; 
-          position: absolute; 
-          right: 8.4%;
-          bottom: 17.8%;
+          max-height: 24px;
+          max-width: 24px; 
+          z-index: 2;
      }
 
 
