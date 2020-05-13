@@ -75,7 +75,6 @@ class NoteModal extends React.Component {
       <div>
         <img
           onClick={this.handleOpenModal}
-          // src="https://i.imgur.com/Df7R8tu.png"
           src="https://i.imgur.com/jyjtEOG.png"
           id="create-icon"
           className="img-responsive"
