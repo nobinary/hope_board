@@ -26,7 +26,10 @@ class NoteModal extends React.Component {
   }
 
   handleCloseModal() {
-    this.setState({ showModal: false });
+    this.setState({ 
+      showModal: false, 
+      color: this.assignColor()
+      });
   }
 
   //CreateNote Function
