@@ -28,7 +28,8 @@ class NoteModal extends React.Component {
   handleCloseModal() {
     this.setState({ 
       showModal: false, 
-      color: this.assignColor()
+      color: this.assignColor(),
+      content: ""
       });
   }
 
