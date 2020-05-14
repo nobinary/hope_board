@@ -13,6 +13,15 @@
     list-style-type: none;
 }
 
+
+.tab-list li {
+    cursor: pointer;
+}
+
+.tab-list li:hover {
+    text-decoration: underline;
+}
+
 .tab-content {
     display: flex;
     flex-wrap: wrap;

@@ -34,7 +34,7 @@ class Tabs extends Component {
 
         return (
             <div className="tabs">
-                <ul className="tab-list">
+                <ul className="tab-list tab-ltr">
                     {children.map((child) => {
                         const { label } = child.props;
 
