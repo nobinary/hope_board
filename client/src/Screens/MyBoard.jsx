@@ -46,6 +46,7 @@ class MyBoard extends React.Component {
             history={history}
             refresh={this.getMyBoard}
             delete_btn="true"
+            update_btn="true"
             top={Math.floor(Math.random() * 60) - 30}
             left={Math.floor(Math.random() * 60) - 30}
             rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}
@@ -75,6 +76,7 @@ class MyBoard extends React.Component {
             user_liked={true}
             refresh={this.getMyBoard}
             delete_btn="false"
+            update_btn="false"
             top={Math.floor(Math.random() * 60) - 30}
             left={Math.floor(Math.random() * 60) - 30}
             rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}

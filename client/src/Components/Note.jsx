@@ -59,6 +59,26 @@ class Note extends Component {
     }
   };
 
+    /// needs to be merged w/ above but render 2 diff buttons (delete/update)
+    renderBtn2 = () => {
+    console.log()
+    const toggleForm = this.state.delete_btn ? "danger" : "";
+    if (this.state.delete_btn === "true") {
+      return (
+        <button
+          className={toggleForm, "update-btn"}
+          onClick={this.deleteClick}
+          value={this.props.userId}
+          name={this.props.note_id}
+        >
+          update
+        </button>
+      );
+    } else {
+      return null
+    }
+  };
+
 
   clickLike = async (e) => {
     let likeData = {
@@ -141,6 +161,7 @@ class Note extends Component {
           <div className="like_box">
             <p className="like_content">Likes: {this.state.num_likes}</p>
             {this.renderBtn()}
+            {this.renderBtn2()}
             <div className="like-buttons">
               <div className="unliked-heart-cont">
             <img

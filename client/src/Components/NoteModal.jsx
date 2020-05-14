@@ -11,7 +11,8 @@ class NoteModal extends React.Component {
     this.state = {
       showModal: false,
       user_id: this.props.userId,
-      content: ""
+      content: "",
+      color: this.assignColor()
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -25,15 +26,21 @@ class NoteModal extends React.Component {
   }
 
   handleCloseModal() {
-    this.setState({ showModal: false });
+    this.setState({ 
+      showModal: false, 
+      color: this.assignColor(),
+      content: ""
+      });
   }
 
   //CreateNote Function
 
-  handleChange = event =>
+  handleChange = event => {
+     console.log(event.target.name, event.target.value)
     this.setState({
       [event.target.name]: event.target.value,
     });
+  }
 
     assignColor = () => {
       let number = Math.floor(Math.random() *5)
@@ -49,7 +56,7 @@ class NoteModal extends React.Component {
         note: {
           user_id: this.props.userId,
           content: content,
-          color: this.assignColor()
+          color: this.state.color
         }
       };
 
@@ -65,9 +72,7 @@ class NoteModal extends React.Component {
     };
 
   render() {
-    const color = this.assignColor()
-    console.log(color)
-    const { user_id, content} = this.state;
+    const { user_id, content, color} = this.state;
     return (
       <div>
         <img
@@ -78,9 +83,11 @@ class NoteModal extends React.Component {
           alt="black plus button to create a post"
         />
         <ReactModal
+          color={color}
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal"
           className={`Modal  ${color}`}
+          modalColor={color}
           overlayClassName="Overlay"
           ariaHideApp={false}
           onRequestClose={this.handleCloseModal}
