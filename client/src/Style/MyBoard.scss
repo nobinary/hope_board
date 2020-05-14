@@ -2,6 +2,7 @@
 .myboard_main {
     display: flex;
     position: relative;
+    width: 100%;
 }
 
 .board_menu {
@@ -14,24 +15,14 @@
 .myboard {
     display: flex;
     position: absolute;
-    margin-top: 20px;
-
-    .my-board-header {
-        color: black;
-        font-size: 30px;
-        font-weight: 700;
-        margin-left: 31px;
-    }
+    margin-top: 45px;
+    width: 100%;
 }
 
 .mylists {
-    // border: 1px purple solid;
-    width: 40vw;
-    margin-left: 30%;
+    display: flex;
+    width: 100%;
+
 }
 
-.mynotes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
