@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { createLike, deleteLike, deleteNote } from '../Services/ApiMethods'
 import '../Style/Note.scss'
 import ReactModal from 'react-modal'
+import EditModal from './EditModal'
 
 class Note extends Component {
   constructor(props) {
@@ -40,6 +41,11 @@ class Note extends Component {
     this.props.refresh();
   }
 
+    updateClick = async (e) => {
+      console.log("modal works")
+      // <EditModal/>
+  }
+
   renderBtn = () => {
     console.log()
     const toggleForm = this.state.delete_btn ? "danger" : "";
@@ -52,26 +58,6 @@ class Note extends Component {
           name={this.props.note_id}
         >
           delete
-        </button>
-      );
-    } else {
-      return null
-    }
-  };
-
-    /// needs to be merged w/ above but render 2 diff buttons (delete/update)
-    renderBtn2 = () => {
-    console.log()
-    const toggleForm = this.state.delete_btn ? "danger" : "";
-    if (this.state.delete_btn === "true") {
-      return (
-        <button
-          className={toggleForm, "update-btn"}
-          onClick={this.deleteClick}
-          value={this.props.userId}
-          name={this.props.note_id}
-        >
-          update
         </button>
       );
     } else {
@@ -161,7 +147,6 @@ class Note extends Component {
           <div className="like_box">
             <p className="like_content">Likes: {this.state.num_likes}</p>
             {this.renderBtn()}
-            {this.renderBtn2()}
             <div className="like-buttons">
               <div className="unliked-heart-cont">
             <img
@@ -190,6 +175,10 @@ class Note extends Component {
               <p>{this.props.ago_string}</p>
             </div>
           </div>
+          <EditModal
+          note_id={this.props.note_id}
+          color={this.props.color}
+          />
         </ReactModal>
         <div
           className={`main_note ${this.props.color}`}

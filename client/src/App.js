@@ -5,7 +5,6 @@ import MyBoard from './Screens/MyBoard'
 import Login from './Screens/Login'
 import Register from './Screens/Register' 
 import Logout from './Screens/Logout'
-import About from './Components/About'
 import {Switch, Route} from 'react-router-dom'
 import userData from './Services/Auth';
 import logOut from './Services/Auth';
@@ -49,9 +48,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Switch>
-            <Route path="/about">
-              <About/>
-            </Route>
             <Route path="/register">
               <Register setUser={this.setUser} />
             </Route>

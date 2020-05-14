@@ -37,7 +37,7 @@ class AboutModal extends React.Component {
                 <ReactModal 
                     isOpen={this.state.showModal} 
                     contentLabel="Minimal Modal Example" 
-                    className="Modal" 
+                    className="Modal blue" 
                     overlayClassName="Overlay" 
                     onRequestClose={this.handleCloseModal}
                     >
