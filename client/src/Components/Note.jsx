@@ -144,7 +144,7 @@ class Note extends Component {
             <div className="like-buttons">
               <div className="unliked-heart-cont">
             <img
-              src="https://i.imgur.com/O92Pzls.png"
+              src={this.state.user_liked ? "https://i.imgur.com/Yv7Nr4B.png" : "https://i.imgur.com/O92Pzls.png"}
               onClick={this.clickLike}
               className="like-button btn-default"
               value={this.props.userId}
@@ -153,7 +153,7 @@ class Note extends Component {
             />
             </div>
             <div className="liked-heart-cont">
-            {this.state.user_liked ? <img src="https://i.imgur.com/Yv7Nr4B.png" className="liked-heart" /> : ``}
+            {/* {this.state.user_liked ? <img src="https://i.imgur.com/Yv7Nr4B.png" className="liked-heart" /> : ``} */}
             {/* replace XXXXX with real user feedback */}
             </div>
           </div>
