@@ -1,5 +1,8 @@
 $primary-blue: rgb(0, 255, 225);
+$primary-yellow: rgb(255, 234, 0);
 $primary-magenta: rgb(255, 0, 179);
+$primary-orange: rgb(255, 136, 0);
+$primary-green: #28D701;
 
 * {
   font-family: 'Gloria Hallelujah', cursive;
@@ -10,11 +13,11 @@ $primary-magenta: rgb(255, 0, 179);
     top: 50%;
     left: 50%;
     // display: flex;
+    color: blue;
     padding: 2em;
     min-width: 36em;
     min-height: 36em;
     max-width: 100%;
-    background-color: $primary-blue;
     transform: translate(-50%, -50%);
     outline: transparent;
     box-shadow: 0px 10px 50px #1C1C1C;
@@ -41,7 +44,7 @@ $primary-magenta: rgb(255, 0, 179);
     min-height: 27em;
     max-height: 35%;
     margin-top: 10px;
-    background-color: $primary-blue;
+    // background-color: $primary-blue;
     border: none;
     outline: none;
     margin-left: 25px;
@@ -87,5 +90,23 @@ $primary-magenta: rgb(255, 0, 179);
     cursor: pointer;
   }
 
+.blue {
+  background-color: $primary-blue;
+}
 
+.yellow {
+  background-color: $primary-yellow;
+}
+
+.pink {
+  background-color: $primary-magenta;
+}
+
+.green {
+  background-color: $primary-green;
+}
+
+.orange {
+  background-color: $primary-orange;
+}
 

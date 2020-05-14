@@ -11,7 +11,7 @@ class NoteModal extends React.Component {
     this.state = {
       showModal: false,
       user_id: this.props.userId,
-      content: "",
+      content: ""
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -27,8 +27,6 @@ class NoteModal extends React.Component {
   handleCloseModal() {
     this.setState({ showModal: false });
   }
-
-  
 
   //CreateNote Function
 
@@ -66,11 +64,10 @@ class NoteModal extends React.Component {
         });
     };
 
-
-
-
   render() {
-    const { user_id, content } = this.state;
+    const color = this.assignColor()
+    console.log(color)
+    const { user_id, content} = this.state;
     return (
       <div>
         <img
@@ -83,7 +80,7 @@ class NoteModal extends React.Component {
         <ReactModal
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal"
-          className="Modal"
+          className={`Modal  ${color}`}
           overlayClassName="Overlay"
           ariaHideApp={false}
           onRequestClose={this.handleCloseModal}
@@ -103,7 +100,7 @@ class NoteModal extends React.Component {
               name="content"
               value={content}
               placeholder="Write thoughts and ideas here..."
-              className="input"
+              className={`input  ${color}`}
               required
             ></textarea>
             <div className="post-cont">
