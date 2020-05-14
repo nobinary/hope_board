@@ -10,6 +10,16 @@ export const fetchNotes = async () => {
     }
   }
 
+  export const fetchNote = async (note_id) => {
+  console.log(note_id)
+try {
+  const resp = await Api.get(`/notes/${note_id}`)
+  return resp
+} catch (error) {
+  throw error
+  }
+}  
+
   export const postNote = async (note) => {
     console.log(note)
 	try {
@@ -19,6 +29,16 @@ export const fetchNotes = async () => {
 		throw error
     }
 }   
+
+    // await axios.put(
+    //     `http://carrotstick-api.herokuapp.com/habits/${this.props.match.params.habit_id}`,obj)
+    //     .then(response => {
+    //     console.log(response);
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   }
+    // );
 
 export const deleteNote = async (note) => {
   console.log(note)

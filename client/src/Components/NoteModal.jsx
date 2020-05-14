@@ -36,7 +36,6 @@ class NoteModal extends React.Component {
   //CreateNote Function
 
   handleChange = event => {
-     console.log(event.target.name, event.target.value)
     this.setState({
       [event.target.name]: event.target.value,
     });
