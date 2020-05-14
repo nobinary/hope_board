@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactModal from 'react-modal'
+import {fetchNote} from '../Services/ApiMethods'
 import "../Style/AboutModal.scss"
 
 
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             showModal : false,
-            content: ""
+            content: ''
         };
 
         this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -21,9 +21,31 @@ class EditModal extends React.Component {
     }
 
 
-    getNote = () => {
+    getNote = async () => {
         console.log("got note!" + this.props.note_id)
+        let note = await fetchNote(this.props.note_id)
+        console.log(note)
+        this.setState(state => ({
+       content: note.data.content
+     }));
     }
+
+handleChange = e => this.setState({ [e.target.name]: e.target.value })
+
+// handleSubmit= async (event) => {
+//     event.preventDefault();
+//     const obj = {
+//      content: this.state.formInput.newContent
+//     };
+//     console.log(obj)
+//     updateNote()
+//     this.getNote()
+//     this.setState({
+//       formInputs: {
+//         name: ""
+//       }
+//     });
+//   }
 
     handleOpenModal () {
         this.setState({ showModal: true });
@@ -59,7 +81,7 @@ class EditModal extends React.Component {
               type="text"
               onChange={this.handleChange}
               name="content"
-            //   value={content}
+              value={this.state.content}
             //   placeholder="Write thoughts and ideas here..."
               className={`input  ${this.props.color}`}
               required
