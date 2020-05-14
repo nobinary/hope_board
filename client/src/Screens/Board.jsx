@@ -19,15 +19,6 @@ class Board extends React.Component {
   }
 
   getNotesFromApi = async () => {
-  //   const notes = fetchNotes();
-  //   console.log(notes)
-  //   const self = this
-  //  notes.then(function(data) { 
-  //  self.setState(state => ({
-  //        notes: data.data
-  //      }));
-  //    });
-
      const notes = await fetchNotes(); 
      console.log(notes);
      this.setState(state => ({
@@ -54,7 +45,6 @@ class Board extends React.Component {
             activeId={this.props.userId}
             userId={this.props.userId} 
             user_liked={item.user_liked} // rename this? activeUserLiked, maybe?
-            // setUser={this.setUser}
             top={Math.floor(Math.random() * 60)-30}
             left={Math.floor(Math.random() * 60)-30}
             rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}
