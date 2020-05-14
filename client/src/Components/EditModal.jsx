@@ -32,12 +32,12 @@ class EditModal extends React.Component {
 
 handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
-// handleSubmit= async (event) => {
-//     event.preventDefault();
-//     const obj = {
-//      content: this.state.formInput.newContent
-//     };
-//     console.log(obj)
+handleSubmit= async (event) => {
+    event.preventDefault();
+    const obj = {
+     content: this.state.content
+    };
+    console.log(obj)
 //     updateNote()
 //     this.getNote()
 //     this.setState({
@@ -45,7 +45,7 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value })
 //         name: ""
 //       }
 //     });
-//   }
+  }
 
     handleOpenModal () {
         this.setState({ showModal: true });
@@ -76,7 +76,7 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value })
                     overlayClassName="edit-overlay" 
                     onRequestClose={this.handleCloseModal}
                     >
-            <form className="create-form" onSubmit={this.onNoteSubmit}>
+            <form className="create-form" onSubmit={this.handleSubmit}>
             <textarea
               type="text"
               onChange={this.handleChange}
