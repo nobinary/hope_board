@@ -31,8 +31,7 @@ class App extends React.Component {
       this.setState({
         userId: user.id,
         userEmail: user.email,
-        userFirstName: user.first_name,
-        userLastName: user.last_name
+        userName: user.name
       })
     }
   }
