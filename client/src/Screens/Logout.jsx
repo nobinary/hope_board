@@ -18,31 +18,9 @@ class Logout extends Component {
 
 
  }
+ 
 export default withRouter(Logout)
 
 
 
 
-
-
-
-
-
-// state = {
-    //     navigate: false
-    // }
-
-    // logout = () => {
-    //     localStorage.clear();
-    //     this.setState({ navigate: true });
-    // }
-
-    // render() {
-    //     const { navigate } = this.state;
-
-    //     if(navigate) {
-    //         return <Redirect to="/" push={true} />
-    //     }
-
-    //     return <a onClick={this.logout}>Logout</a>
-    // }
