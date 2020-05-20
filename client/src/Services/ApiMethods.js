@@ -30,15 +30,17 @@ try {
     }
 }   
 
-    // await axios.put(
-    //     `http://carrotstick-api.herokuapp.com/habits/${this.props.match.params.habit_id}`,obj)
-    //     .then(response => {
-    //     console.log(response);
-    //   },
-    //   error => {
-    //     console.log(error);
-    //   }
-    // );
+export const updateNote = async (note) => {
+  console.log(note)
+  console.log(note.note.id)
+try {
+  const resp = await Api.put(`/notes/${note.note.id}`, note)
+  return resp
+} catch (error) {
+  throw error
+  }
+}   
+
 
 export const deleteNote = async (note) => {
   console.log(note)

@@ -178,6 +178,7 @@ class Note extends Component {
           <EditModal
           note_id={this.props.note_id}
           color={this.props.color}
+          refresh={this.props.refresh} 
           />
         </ReactModal>
         <div

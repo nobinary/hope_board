@@ -49,6 +49,7 @@ class Board extends React.Component {
             left={Math.floor(Math.random() * 60)-30}
             rotate={Math.floor(Math.random() * 10) * (Math.random() > .5 ? -1 : 1)}
             zIndex={this.state.notes.length - index} 
+            refresh={this.getNotesFromApi}
           />
         );
       });
