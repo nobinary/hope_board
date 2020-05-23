@@ -17,11 +17,15 @@
     position: absolute;
     margin-top: 45px;
     width: 100%;
+
+    .mylists {
+        display: flex;
+        width: 100%;
+    }
+
 }
 
-.mylists {
-    display: flex;
-    width: 100%;
-}
+
+
 
 

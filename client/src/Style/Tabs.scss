@@ -10,19 +10,32 @@
     font-weight: bold;
     justify-content: flex-start;
     max-width: 100%;
-    margin-left: 10em;
+    margin-left: 7.5em;
     list-style-type: none;
 }
 
 
 .tab-list li {
     cursor: pointer;
-    margin-right: 30px;
+    // margin-right: 30px;
 }
 
-.tab-list li:hover {
+
+.tab-list-itemtab-list-active {
+    // border-top: 3px solid black;
+    // border-left: 3px solid black;
+    // border-right: 3px solid black;
+    // padding: 0 10px 0 10px;
     text-decoration: underline;
+    margin-left: 20px;
 }
+
+.tab-list-item {
+    margin-left: 20px;
+    // border-bottom: 2px solid black;
+}
+
+
 
 .tab-content {
     display: flex;
