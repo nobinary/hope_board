@@ -15,7 +15,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userId: null
+      userId: null,
+      anonLikes: []
     };
   }
 
@@ -31,13 +32,28 @@ class App extends React.Component {
       this.setState({
         userId: user.id,
         userEmail: user.email,
-        userName: user.name
+        userName: user.name,
+        anonLikes: []
       })
     }
   }
 
   clearUser = () => {
     this.setState({ userId: null })
+  }
+
+  trackAnons = (noteId) => {
+    if (this.state.anonLikes.includes(noteId)) {
+      const newLikes = this.state.anonLikes.filter(id => id != noteId);
+      this.setState({
+        anonLikes: newLikes
+      })
+    } else {
+      const newLikes = this.state.anonLikes.concat([noteId]);
+      this.setState({
+        anonLikes: newLikes
+      })
+    }
   }
 
 
@@ -60,7 +76,7 @@ class App extends React.Component {
               {myBoard}
             </Route>
             <Route path="/">
-              <Board userId={this.state.userId} />
+              <Board userId={this.state.userId} anonLikes={this.state.anonLikes} trackAnons={this.trackAnons} />
             </Route>
           </Switch>
       </div>
