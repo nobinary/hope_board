@@ -62,17 +62,19 @@ try {
   }
 
   export const createLike = async (data) => {
-	try {
-		const resp = await Api.post(`/likes`, data)
-		return resp
-	} catch (error) {
-		throw error
-    }
-}   
+    const anon = data.user_id ? '' : '/anonymous'; // prepends anonymous route to request if no logged-in user
+    try {
+      const resp = await Api.post(`${anon}/likes`, data)
+      return resp
+    } catch (error) {
+      throw error
+      }
+  }   
 
   export const deleteLike = async (data) => {
+    const anon = data.user_id ? '' : '/anonymous'; // prepends anonymous route to request if no logged-in user
     try {
-      const resp = await Api.post(`/likes/delete`, data)
+      const resp = await Api.post(`${anon}/likes/delete`, data)
       return resp
     } catch (error) {
       throw error
