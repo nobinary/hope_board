@@ -70,13 +70,14 @@ class EditModal extends React.Component {
     return (
       <div>
         <button
-          className="update-btn "
+          id="update-btn"
+          className={`${this.props.color}`}
           onClick={this.updateClick}
           value={this.props.userId}
           name={this.props.note_id}
           onClick={this.handleOpenModal}
         >
-          update
+          Update
         </button>
         <ReactModal
           isOpen={this.state.showModal}
