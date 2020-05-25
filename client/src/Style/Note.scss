@@ -24,23 +24,22 @@ $primary-green: #28D701;
 
       .date-from {
            display: flex;
-           flex-direction: row;
-           position: absolute;
-           bottom: 25px;
+           position: relative;
+           justify-content: space-between;
       }
 
       .author-text {
-           display: inline;
-           text-align: left;
+           display: flex;
       }
 
       .text-content {
            margin-top: 2px;
            line-height: 20px;
+           height: 15vh;
       }
 
       .date-content { 
-           margin-left: 25px;
+           display: flex;
       }
 }
 
@@ -104,12 +103,15 @@ $primary-green: #28D701;
      border-radius: 50px;
 }
 
-.update-btn {
+#update-btn {
      height: 30px;
      width: 70px;
-     color: white;
-     background-color: grey;
-     border-radius: 50px;
+     border: white;
+     color: black; 
+     border: 1px solid black;
+     box-shadow: 1px 1px 1px #1C1C1C; 
+     cursor: pointer;
+     outline: none;
 }
 
 //MODAL 

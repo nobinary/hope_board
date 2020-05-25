@@ -104,26 +104,17 @@ class MyBoard extends React.Component {
           <div className="myboard">
             <div className="mylists">
               <Tabs>
-                <div label="My Posts">
+                <div className="posts-tab" label="My Posts">
+                  <div className="posts-tab"></div>
                   {/* Hello I am Posts */}
                   {this.renderMyNotes()}
               </div>
-                <div label="My Favorites">
+                <div className="fav-tab" label="My Favorites">
                   {/* Hello I am Favorites */}
                   {this.renderMyFavorites()}
               </div>
               </Tabs>
-              {/* <p className="my-board-header">My Posts</p>
-              <div className="mynotes">
-                {this.renderMyNotes()}
-              </div> */}
             </div>
-            {/* <div className="mylists">
-              <p className="my-board-header">My Favorites</p>
-              <div className="mynotes">
-                {this.renderMyFavorites()}
-              </div>
-            </div> */}
           </div>
         </div>
         <Footer userId={this.props.userId} refresh={this.getMyBoard} />
