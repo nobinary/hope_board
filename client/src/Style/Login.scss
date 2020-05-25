@@ -28,12 +28,12 @@ $main-fonts: black;
     }
 
     #yellow-note {
-        height: 550px;
-        width: 550px;
+        height: 600px;
+        width: 600px;
         background-color: $primary-yellow;
         position: absolute;
         transform: rotate(-10deg);
-        top: 15%;
+        top: 18%;
         left: 40%;
         box-shadow: 10px 10px 50px #1C1C1C;
     }
@@ -42,10 +42,10 @@ $main-fonts: black;
 .login-form {
     position: absolute;
     background-color: $primary-blue;
-    top: 8%;
+    top: 12%;
     left: 30%;
-    height: 550px;
-    width: 550px;
+    height: 600px;
+    width: 600px;
     box-shadow: 10px 20px 50px #373737;
     color: $main-fonts;
 
@@ -101,7 +101,7 @@ $main-fonts: black;
             font-size: 25px;
             font-weight: 700;
             margin-left: 35%;
-            margin-top: 45px;
+            margin-top: 55px;
             border: #DD0097;
             box-shadow: 1px 1px 2px black;
         }

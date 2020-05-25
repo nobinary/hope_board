@@ -9,7 +9,7 @@ class MenuButton extends Component {
             src="https://i.imgur.com/p9P6bPo.png" 
             id="hamburgerButton"
             onMouseUp={this.props.handleMouseDown}
-            >MindBoard</a>
+            >NoteBoard</a>
         )
     }
 
