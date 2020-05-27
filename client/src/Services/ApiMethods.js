@@ -79,6 +79,16 @@ try {
       }
   }   
 
+  export const fetchUser = async (user_id) => {
+    console.log(user_id)
+  try {
+    const resp = await Api.get(`/users/11`,user_id)
+    return resp
+  } catch (error) {
+    throw error
+    }
+  }  
+
 ///AUTH
 
 export const signUp = async credentials => {
