@@ -89,6 +89,16 @@ try {
     }
   }  
 
+export const updateUser = async (userId, userInfo, password) => {
+  try {
+    const resp = await Api.put(`/users/${userId}`, {user: userInfo, password: password});
+    console.log(resp);
+    return resp.data;
+  } catch (error) {
+    throw error
+  }
+}
+
 ///AUTH
 
 export const signUp = async credentials => {

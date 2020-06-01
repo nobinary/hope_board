@@ -1,7 +1,7 @@
 import React from "react";
 import MenuContainer from "../Components/MenuContainer";
 import Footer from "../Components/Footer";
-import {fetchUser} from '../Services/ApiMethods'
+import {fetchUser, updateUser} from '../Services/ApiMethods'
 import "../Style/Board.scss";
 import "../Style/MyBoard.scss";
 import "../Style/MyProfile.scss"
@@ -12,7 +12,8 @@ class myProfile extends React.Component {
     this.state = {
       userName: '',
       userEmail: '',
-      password: ''
+      password: '',
+      message: ''
     };
   }
 
@@ -22,14 +23,32 @@ class myProfile extends React.Component {
 
   getUser = async () => {
     const resp = await fetchUser(this.props.userId);
-    console.log(resp)
     this.setState({
       userName: resp.data.name,
       userEmail: resp.data.email
     })
   }
 
+  submitUserUpdate = async (e) => {
+    e.preventDefault();
+    const userInfo = {
+      name: this.state.userName,
+      email: this.state.userEmail
+    }
+    try {
+      const resp = await updateUser(this.props.userId, userInfo, this.state.password);
+      console.log('submit: ',resp);
+      if (resp) {
+        this.setState({message: 'User information updated.'})
+      } 
+    } catch (error) {
+      console.log(error);
+      this.setState({message: 'Incorrect password. Please try again.'})
+    }
+  }
+
   handleChange = event => {
+    this.props.message && this.setState({message: ''});
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -56,9 +75,9 @@ class myProfile extends React.Component {
             <div className="board-box">
               <div className="profile p_modal">
                 <p className="p_header">My Profile:</p>
-                <form className="update-form" onSubmit={this.submitUserUpdate}>
+                <form className="update-form" onSubmit={(e) => this.submitUserUpdate(e)}>
                   <div>
-                    <label HTMLfor="userName">User name:</label> 
+                    <label htmlFor="userName">User name:</label> 
                     <input
                       type="text"
                       onChange={(e) => this.handleChange(e)}
@@ -68,7 +87,7 @@ class myProfile extends React.Component {
                     ></input>
                   </div>
                   <div>
-                    <label HTMLfor="userEmail">E-mail:</label> 
+                    <label htmlFor="userEmail">E-mail:</label> 
                     <input
                       type="text"
                       onChange={(e) => this.handleChange(e)}
@@ -78,14 +97,17 @@ class myProfile extends React.Component {
                     ></input>
                   </div>
                   <div>
-                    <label HTMLfor="password">Password:</label> 
+                    <label htmlFor="password">Password:</label> 
                     <input
-                      type="text"
+                      type="password"
                       onChange={(e) => this.handleChange(e)}
                       name="password"
                       value={this.state.password}
                       required
                     ></input>
+                  </div>
+                  <div>
+                    {this.state.message}
                   </div>
                   <div className="post-cont">
                     <button type="submit" id="submit" className="btn btn-default">
