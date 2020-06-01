@@ -32,7 +32,7 @@ class Board extends React.Component {
       return this.state.notes.map((item, index) => {
         return (
           <Note
-            key={index}
+            key={item.id}
             note_id={item.id}
             user_id={item.user_id}
             user_name={item.user_name}
