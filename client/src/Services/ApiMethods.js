@@ -82,7 +82,7 @@ try {
   export const fetchUser = async (user_id) => {
     console.log(user_id)
   try {
-    const resp = await Api.get(`/users/11`,user_id)
+    const resp = await Api.get(`/users/${user_id}`)
     return resp
   } catch (error) {
     throw error
@@ -124,9 +124,3 @@ export const logOut = async userId => {
   }
 
 }
-
-
-
-
-
-  
