@@ -81,6 +81,26 @@ try {
       }
   }   
 
+  export const fetchUser = async (user_id) => {
+    console.log(user_id)
+  try {
+    const resp = await Api.get(`/users/${user_id}`)
+    return resp
+  } catch (error) {
+    throw error
+    }
+  }  
+
+export const updateUser = async (userId, userInfo, password) => {
+  try {
+    const resp = await Api.put(`/users/${userId}`, {user: userInfo, password: password});
+    console.log(resp);
+    return resp.data;
+  } catch (error) {
+    throw error
+  }
+}
+
 ///AUTH
 
 export const signUp = async credentials => {
@@ -116,9 +136,3 @@ export const logOut = async userId => {
   }
 
 }
-
-
-
-
-
-  

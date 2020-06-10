@@ -41,14 +41,6 @@ class Login extends Component {
         password: ""
       });
     }
-      // activeUser.then(resp => resp.json())
-      // .then(resp => resp.user)
-      // .catch(error => {
-      //   console.error(error);
-
-      // });
-    // if (activeUser) {
-    // }
   };
 
   renderError = () => {
@@ -74,9 +66,6 @@ class Login extends Component {
           src="https://i.imgur.com/V324XgZ.jpg"
           alt="brown corkboard background"
         />
-        {/* <BigPostIt
-        type="login"
-      /> */}
       <div className="nav-bar">
       <MenuContainer userId={this.props.userId} />
       </div>
@@ -110,9 +99,6 @@ class Login extends Component {
               onChange={this.handleChange}
               required
             />
-            {/* <button type="submit" id="submit" className="btn btn-default">
-              Submit
-            </button> */}
             {this.renderError()}
           </form>
         </main>

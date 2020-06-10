@@ -2,6 +2,7 @@ import React from 'react';
 import MenuContainer from './Components/MenuContainer'
 import Board from './Screens/Board'
 import MyBoard from './Screens/MyBoard'
+import MyProfile from './Screens/MyProfile'
 import Login from './Screens/Login'
 import Register from './Screens/Register' 
 import Logout from './Screens/Logout'
@@ -43,6 +44,7 @@ class App extends React.Component {
 
   render () {
     const myBoard = this.state.userId ? (<MyBoard userId={this.state.userId} />) : (<Login setUser={this.setUser} />)
+    const myProfile = this.state.userId ? (<MyProfile userId={this.state.userId} />) : (<Login setUser={this.setUser} />)
 
     return (
       <div className="App">
@@ -58,6 +60,9 @@ class App extends React.Component {
             </Route>
             <Route path="/myboard">
               {myBoard}
+            </Route>
+            <Route path="/myprofile">
+            {myProfile}
             </Route>
             <Route path="/">
               <Board userId={this.state.userId} />

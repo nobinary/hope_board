@@ -21,6 +21,14 @@ export default class Menu extends Component {
       </h2>) :
       null;
 
+      const myProfile= this.props.userId ?
+      (<h2>
+        <Link className="link" to="/myProfile">
+          My Profile
+        </Link>
+      </h2>) :
+      null;
+
     const loginLogout = this.props.userId ?
       (
           <h2>
@@ -57,6 +65,7 @@ export default class Menu extends Component {
           </Link>
         </h2>
         {myBoard}
+        {myProfile}
         {loginLogout}
         {registerLink}
       </div>
