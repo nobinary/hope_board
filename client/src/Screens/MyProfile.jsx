@@ -13,7 +13,8 @@ class myProfile extends React.Component {
       userName: '',
       userEmail: '',
       password: '',
-      message: ''
+      message: '',
+      userId: this.props.userId
     };
   }
 
@@ -66,8 +67,7 @@ class myProfile extends React.Component {
             alt="brown corkboard background"
           />
           <div className="board_menu">
-            <MenuContainer 
-            // userId={this.props.userId} 
+            <MenuContainer userId={this.props.userId} 
             />
           </div>
           <div className="myboard">
