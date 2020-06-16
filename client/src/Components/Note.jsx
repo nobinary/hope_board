@@ -12,6 +12,7 @@ class Note extends Component {
       num_likes: 0,
       error_msg: null,
       delete_btn: false,
+      update_btn: false,
       showModal: false,
       userId: null
     }
@@ -26,6 +27,7 @@ class Note extends Component {
       num_likes: this.props.num_likes,
       user_liked: this.props.user_liked,
       delete_btn: this.props.delete_btn,
+      update_btn: this.props.update_btn,
       userId: this.props.userId
     });
   }
@@ -183,6 +185,7 @@ class Note extends Component {
           note_id={this.props.note_id}
           color={this.props.color}
           refresh={this.props.refresh} 
+          update_btn={this.props.update_btn}
           />
         </ReactModal>
         <div

@@ -106,11 +106,9 @@ class MyBoard extends React.Component {
               <Tabs>
                 <div className="posts-tab" label="My Posts">
                   <div className="posts-tab"></div>
-                  {/* Hello I am Posts */}
                   {this.renderMyNotes()}
               </div>
                 <div className="fav-tab" label="My Favorites">
-                  {/* Hello I am Favorites */}
                   {this.renderMyFavorites()}
               </div>
               </Tabs>

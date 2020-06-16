@@ -45,6 +45,7 @@ class Board extends React.Component {
             activeId={this.props.userId}
             trackAnons={this.props.trackAnons}
             userId={this.props.userId} 
+            update_btn="false"
             user_liked={this.props.anonLikes.includes(item.id) || item.user_liked} // rename this? activeUserLiked, maybe?
             top={Math.floor(Math.random() * 60)-30}
             left={Math.floor(Math.random() * 60)-30}
