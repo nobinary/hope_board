@@ -42,6 +42,7 @@ class MyBoard extends React.Component {
             content={item.content}
             color={item.color}
             num_likes={item.num_likes}
+            user_liked={item.user_liked}
             created_at={item.created_at}
             history={history}
             // refresh={this.getMyBoard}
