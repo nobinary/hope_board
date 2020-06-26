@@ -98,7 +98,7 @@ class Note extends Component {
       this.props.trackAnons(Number(likeData.note_id));
     }
 
-    if (this.props.refresh) {
+    if (this.props.closeModal) {
       this.handleCloseModal();
       this.props.refresh();
     }
