@@ -35,13 +35,14 @@ class MyBoard extends React.Component {
       return this.state.myNotes.map((item, index) => {
         return (
           <Note
-            key={index}
+            key={item.id}
             note_id={item.id}
             user_id={item.user_id}
             userId={this.props.userId}
             content={item.content}
             color={item.color}
             num_likes={item.num_likes}
+            user_liked={item.user_liked}
             created_at={item.created_at}
             history={history}
             refresh={this.getMyBoard}
@@ -63,7 +64,7 @@ class MyBoard extends React.Component {
       return this.state.myFavorites.map((item, index) => {
         return (
           <Note
-            key={index}
+            key={item.id}
             note_id={item.id}
             user_id={item.user_id}
             userId={this.props.userId}
@@ -74,6 +75,7 @@ class MyBoard extends React.Component {
             created_at={item.created_at}
             history={history}
             user_liked={true}
+            closeModal={true}
             refresh={this.getMyBoard}
             delete_btn="false"
             update_btn="false"
