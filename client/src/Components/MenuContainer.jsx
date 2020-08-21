@@ -32,7 +32,6 @@ class MenuContainer extends Component {
   render() {
     return (
       <>
-      {/* <h1 className="main-header">MindBoard</h1> */}
       <MenuButton handleMouseDown={this.handleMouseDown}/>
       <Menu userId={this.props.userId} handleMouseDown={this.handleMouseDown}
           menuVisibility={this.state.visible}/>
